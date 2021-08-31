@@ -1,4 +1,4 @@
-name: Upload Website
+name: resume_in_html
 
 on:
   push:
