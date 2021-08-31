@@ -3,7 +3,7 @@ name: resume_in_html
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
