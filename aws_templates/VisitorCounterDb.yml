@@ -6,9 +6,6 @@ Resources:
       AttributeDefinitions:
         - AttributeName: website_name
           AttributeType: 'S'
-
-        - AttributeName: visitor_counter
-          AttributeType: 'N'
       KeySchema:
         - AttributeName: website_name
           KeyType: HASH
@@ -16,4 +13,3 @@ Resources:
         ReadCapacityUnits: '1'
         WriteCapacityUnits: '1'
       TableName: visitor
-      
