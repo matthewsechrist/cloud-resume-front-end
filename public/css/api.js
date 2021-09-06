@@ -7,7 +7,11 @@ const getVisitorCount = async () => {
     var visitor_count = document.getElementById("visitor_count");
 visitor_count.value = data;
     
+  
+    
     console.log(visitor_count)
 }
 
 getVisitorCount()
+
+alert(visitor_count);
