@@ -1,17 +1,29 @@
-
-
-const getVisitorCount = async () => {
-    const response = await fetch("https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors”)
-    const data = await response.json()
-    
-    var visitor_count = document.getElementById("body");
-visitor_count.value = data;
-    
+// api url
+const api_url = 
+    "https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors";
   
+// Defining async function
+async function getapi(url) {
     
-    console.log(visitor_count)
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        hideloader();
+    }
+     document.getElementById("visitors").innerHTML = data.results;
 }
+// Calling that async function
+getapi(api_url);
+  
+// Function to hide the loader
+function hideloader() {
+    document.getElementById('loading').style.display = 'none';
+}
+// Function to define innerHTML for HTML table
 
-getVisitorCount()
-
-alert(visitor_count);
+    // Setting innerHTML as tab variable
+    document.getElementById("visitors").innerHTML = data.results;
