@@ -1,4 +1,4 @@
-function updateCounter(){
+function visitorCounter(){
 fetch("https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors")
   .then(response => response.text())
   .then((body) => {
@@ -8,3 +8,5 @@ fetch("https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors")
     console.log(error); 
   });  
 }  
+
+visitorCounter();
