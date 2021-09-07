@@ -9,3 +9,4 @@ fetch("https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors")
   });  
 }  
 
+console.log(body);
