@@ -20,20 +20,27 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./public/ s3://matthewsechrist.cloud --delete
+      run: aws s3 sync ./public/ s3://matthewsechrist.cloud 
 ---
-  
-name: End-to-end tests
+name: example-basic
 on: [push]
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
+  basic-ubuntu-18:
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-     
-      - name: Setup npm package
-        run: npm init -y && npm install
+        uses: actions/checkout@v2
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v1
+      - name: Cypress tests
+        uses: cypress-io/github-action@v2
+        uses: ./
+        # the parameters below are only necessary
+        # because we are running these examples in a monorepo
+        with:
+          # working-directory: examples/basic
+          # just for full picture after installing Cypress
+          # print information about detected browsers, etc
+          # see https://on.cypress.io/command-line#cypress-info
+          build: npx cypress 
+
+
