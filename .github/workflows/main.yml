@@ -21,6 +21,3 @@ jobs:
 
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://matthewsechrist.cloud --delete
----      
-- name: Cypress.io
-  uses: cypress-io/github-action@v2.9.7
