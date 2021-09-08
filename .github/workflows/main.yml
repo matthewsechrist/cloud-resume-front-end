@@ -22,6 +22,7 @@ jobs:
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://matthewsechrist.cloud --delete
 ---
+  
 name: End-to-end tests
 on: [push]
 jobs:
@@ -30,6 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+     
+      - name: Setup npm package
+        run: npm init -y && npm install
 
       - name: Cypress run
         uses: cypress-io/github-action@v1
