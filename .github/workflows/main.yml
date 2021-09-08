@@ -33,7 +33,6 @@ jobs:
 
       - name: Cypress tests
         uses: cypress-io/github-action@v2
-        uses: ./
         # the parameters below are only necessary
         # because we are running these examples in a monorepo
         with:
