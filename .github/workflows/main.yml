@@ -1,4 +1,4 @@
-name: resume_in_html
+name: cloud_resume_front_end
 on:
   push:
     branches:
@@ -26,6 +26,6 @@ jobs:
     - name: set Cypress as a dev dependency
       run: npm install cypress --save-dev
 
-    - name: Cypress.io
+    - name: Run Cypress tests
       uses: cypress-io/github-action@v2.9.7
 
