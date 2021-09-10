@@ -31,9 +31,8 @@ jobs:
 
     - name: HashiCorp - Setup Terraform
       uses: hashicorp/setup-terraform@v1.2.1
-      with:
-        aws-access-key-id: ${{ secrets.TERRAFORM_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.TERRAFORM_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TERRAFORM_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TERRAFORM_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: us-east-1
   
-
