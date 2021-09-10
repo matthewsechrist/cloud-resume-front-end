@@ -29,3 +29,7 @@ jobs:
     - name: Run Cypress tests
       uses: cypress-io/github-action@v2.9.7
 
+    - name: HashiCorp - Setup Terraform
+      uses: hashicorp/setup-terraform@v1.2.1
+  
+
