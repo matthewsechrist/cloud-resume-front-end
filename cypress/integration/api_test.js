@@ -1,6 +1,6 @@
 describe('Visitor Test', () => {
     it.only('Visitor Test - GET Method', () => {
-      cy.request('https://ivinlkop0h.execute-api.us-east-1.amazonaws.com/default/visitors')
+      cy.request('https://2q4tyukeqb.execute-api.us-east-1.amazonaws.com')
     })
   })
 
