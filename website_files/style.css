@@ -227,11 +227,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
   max-width: 500px;
 }
 .center {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px; 
-}
+  display:inline-block;
+margin:5px 20px;
+padding:5px;
+      }
 
 .center-box:empty {
   height: 75px;
@@ -263,7 +262,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .images {
   padding-right: 10px;
+  text-align:center;
 }
+
+
 .fab.fa-github-square {
   font-size: 40px;
   color: rgb(255, 255, 255);
