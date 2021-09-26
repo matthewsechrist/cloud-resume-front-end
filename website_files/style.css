@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
 }
 body {
-  font-family: Helvetica;
+  font-family: Roboto;
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
@@ -233,7 +233,7 @@ padding:5px;
   height: 75px;
 }
 .col.m6 {
-  font-family: Helvetica;
+  font-family: Roboto;
   padding: 0 10px 0 10.5px;
   height: auto;
   padding-top: 0px;
@@ -242,7 +242,7 @@ padding:5px;
   padding-left: 10.5px;
 }
 .c42828 {
-  font-family: Helvetica;
+  font-family: Roboto;
   color: rgb(255, 255, 255);
   font-size: 18px;
   margin: 3px 0 3px 0;
