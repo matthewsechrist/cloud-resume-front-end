@@ -13,7 +13,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: rgb(66, 66, 64);
+  background-color: rgb(40, 40, 40);
 }
 .row {
   display: table;
@@ -24,8 +24,7 @@ body {
   width: 100%;
   line-height: 24px;
   text-align: justify;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgb(66, 66, 64);
+  background-color: rgb(40, 40, 40);
 }
 .col:empty,
 #myForm .col:empty {
@@ -253,7 +252,7 @@ padding:5px;
   text-align: left;
 }
 #ivc82n3 {
-  font-size: 70px;
+  font-size: 60px;
   color: rgb(255, 255, 255);
 }
 
@@ -313,7 +312,7 @@ padding:5px;
 }
 .fab.fa-linkedin:hover {
   border: 0 none rgba(55, 55, 55, 0.73);
-  background-color: rgb(66, 66, 64);
+  background-color: rgb(40, 40, 40);
   color: rgb(176, 189, 208);
   border-top-width: 0px;
   border-right-width: 0px;
@@ -391,7 +390,7 @@ padding:5px;
 .c31996 {
   font-size: 33px;
   line-height: 47px;
-  background-color: rgb(66, 66, 64);
+  background-color: rgb(40, 40, 40);
   text-align: center;
 }
 .gjs-comp-selected.c174398:hover {
