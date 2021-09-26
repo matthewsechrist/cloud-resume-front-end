@@ -252,6 +252,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
   font-size: 44px;
   color: rgb(255, 255, 255);
 }
+
+.images {
+  padding-right: 10px;
+}
 .fab.fa-github-square {
   font-size: 40px;
   color: rgb(255, 255, 255);
