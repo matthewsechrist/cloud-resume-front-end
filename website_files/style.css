@@ -227,9 +227,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
   max-width: 500px;
 }
 .center {
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  height: 100px; 
 }
 
 .center-box:empty {
