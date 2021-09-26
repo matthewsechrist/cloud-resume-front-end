@@ -13,7 +13,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(210, 213, 217);
 }
 .row {
   display: table;
@@ -24,7 +24,7 @@ body {
   width: 100%;
   line-height: 24px;
   text-align: justify;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(210, 213, 217);
 }
 .col:empty,
 #myForm .col:empty {
@@ -313,7 +313,7 @@ padding:5px;
 }
 .fab.fa-linkedin:hover {
   border: 0 none rgba(55, 55, 55, 0.73);
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(210, 213, 217);
   color: rgb(176, 189, 208);
   border-top-width: 0px;
   border-right-width: 0px;
@@ -391,7 +391,7 @@ padding:5px;
 .c31996 {
   font-size: 33px;
   line-height: 47px;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(210, 213, 217);
   text-align: center;
 }
 .gjs-comp-selected.c174398:hover {
@@ -484,4 +484,23 @@ padding:5px;
   #index-banner .section {
     top: 0px;
   }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
 }
