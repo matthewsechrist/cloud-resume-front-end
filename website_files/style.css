@@ -29,112 +29,6 @@ body {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgb(82, 116, 164);
 }
-.col:empty,
-#myForm .col:empty {
-  display: table-cell;
-  height: 75px;
-}
-#myForm .col:empty {
-  position: relative;
-  display: table-cell;
-  height: 75px;
-}
-#myForm . col:empty::after {
-  content: "Add form elements here";
-  color: rgb(136, 136, 136);
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  display: block;
-  width: 400px;
-}
-nav .brand-logo,
-nav ul a {
-  color: rgb(68, 68, 68);
-}
-p {
-  line-height: 2rem;
-}
-.parallax-container .section {
-  width: 100%;
-}
-footer.gram-footer ul.collection > li. collection-header,
-footer.gram-footer ul.collection > li.collection-item {
-  background-image: initial;
-  background-position-x: 0px;
-  background-position-y: 0px;
-  background-size: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: initial;
-  border-right-style: initial;
-  border-bottom-style: initial;
-  border-left-style: initial;
-  border-top-color: initial;
-  border-right-color: initial;
-  border-bottom-color: initial;
-  border-left-color: initial;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-}
-footer.gram-footer ul.collection {
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: initial;
-  border-right-style: initial;
-  border-bottom-style: initial;
-  border-left-style: initial;
-  border-top-color: initial;
-  border-right-color: initial;
-  border-bottom-color: initial;
-  border-left-color: initial;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-}
-.input-field [type="checkbox"] + label,
-.input-field [type="radio"] :checked + label,
-.input-field [type="radio"]:not(:checked) + label {
-  pointer-events: auto;
-}
-input:not([type]):focus:not([readonly]),
-input[type="date"]:not(.browser-default):focus:not([readonly]),
-input [type="datetime-local"]:not(.browser-default):focus:not([readonly]),
-input[type="datetime"]:not(. browser-default):focus:not([readonly]),
-input[type="email"]:not(.browser-default):focus:not([readonly]),
-input[type="number"]:not(.browser-default):focus:not([readonly]),
-input[type="password"] :not(.browser-default):focus:not([readonly]),
-input[type="search"]:not(.browser-default):focus:not([readonly]),
-input[type="tel"]:not(.browser-default):focus:not([readonly]),
-input[type="text"]:not(. browser-default):focus:not([readonly]),
-input[type="time"]:not(.browser-default):focus:not([readonly]),
-input[type="url"]:not(.browser-default):focus:not([readonly]),
-textarea. materialize-textarea:focus:not([readonly]) {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: orange;
-  box-shadow: orange 0px 1px 0px 0px;
-}
-#contact input#your-email,
-#contact textarea#your-message {
-  color: rgb(255, 255, 255);
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
 footer.page-footer {
   margin-top: 0px;
   margin-right: 0px;
@@ -150,70 +44,9 @@ body {
   margin-bottom: 0px;
   margin-left: 0px;
 }
-. col:empty {
-  display: table-cell;
-  height: 75px;
-}
 nav ul a,
 nav .brand-logo {
   color: rgb(68, 68, 68);
-}
-footer. gram-footer ul.collection > li.collection-item,
-footer.gram-footer ul.collection > li. collection-header {
-  background-image: initial;
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: transparent;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: initial;
-  border-right-style: initial;
-  border-bottom-style: initial;
-  border-left-style: initial;
-  border-top-color: initial;
-  border-right-color: initial;
-  border-bottom-color: initial;
-  border-left-color: initial;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-}
-.input-field [type="checkbox"] + label,
-.input-field [type="radio"]:not(:checked) + label,
-.input-field [type="radio"]:checked + label {
-  pointer-events: auto;
-}
-input:not([type]):focus:not([readonly]),
-input [type="text"]:not(.browser-default):focus:not([readonly]),
-input[type="password"]:not(. browser-default):focus:not([readonly]),
-input[type="email"]:not(.browser-default):focus:not([readonly]),
-input[type="url"]:not(.browser-default):focus:not([readonly]),
-input[type="time"]:not(. browser-default):focus:not([readonly]),
-input[type="date"]:not(.browser-default):focus:not([readonly]),
-input[type="datetime"]:not(.browser-default):focus:not([readonly]),
-input[type="datetime-local"] :not(.browser-default):focus:not([readonly]),
-input[type="tel"]:not(.browser-default):focus:not([readonly]),
-input[type="number"]:not(.browser-default):focus:not([readonly]),
-input[type="search"] :not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: orange;
-  box-shadow: orange 0px 1px 0px 0px;
-}
-#contact input#your-email {
-  color: rgb(255, 255, 255);
-}
-#contact textarea#your-message {
-  color: rgb(255, 255, 255);
 }
 .header.col.s12.light.white-text {
   font-size: 18px;
@@ -224,9 +57,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   margin-bottom: 0px;
   margin-left: auto;
   max-width: 500px;
-}
-. center-box:empty {
-  height: 75px;
 }
 .col.m6 {
   font-family: Helvetica, serif;
@@ -300,33 +130,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
   padding-bottom: 0px;
   padding-left: 0px;
 }
-.fab. fa-linkedin:hover {
-  border: 0 none rgba(55, 55, 55, 0.73);
-  background-color: rgb(82, 116, 164);
+.fab.fa-linkedin:hover {
   color: rgb (176, 189, 208);
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-top-color: rgba(55, 55, 55, 0.73);
-  border-right-color: rgba(55, 55, 55, 0 73);
-  border-bottom-color: rgba(55, 55, 55, 0.73);
-  border-left-color: rgba(55, 55, 55, 0.73);
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
 }
 .fab.fa-github-square:hover {
   color: rgb(176, 189, 208);
 }
 .fas.fa-rss-square {
-  color: rgb(250, 250, 250);
+  color: rgb(255, 255, 255);
   font-size: 40px;
 }
 .fas.fa-rss-square:hover {
@@ -336,9 +147,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 24px;
-}
-. gjs-comp-selected.c174398 {
-  color: rgb(255, 255, 255);
 }
 .c32555 {
   font-size: 21px;
@@ -407,7 +215,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
   position: static;
   float: none;
 }
-.c302805. Education-Minor {
+.c302805.Education-Minor {
   text-align: left;
   color: rgb(255, 255, 255);
 }
@@ -415,40 +223,3 @@ textarea.materialize-textarea:focus:not([readonly]) {
   font-size: 22px;
   line-height: 14px;
 }
-#ivrji {
-  display: none;
-}
-#iiytu {
-  display: none;
-}
-#i3kiq {
-  display: none;
-}
-#innqo {
-  display: none;
-}
-#i9ao5 {
-  display: none;
-}
-#inqqh {
-  display: none;
-}
-#iydnm {
-  display: none;
-}
-#i4oa8 {
-  display: none;
-}
-#ikwcb {
-  display: none;
-}
-#ikoyk {
-  display: none;
-}
-#ir6xk {
-  display: none;
-}
-#if65i {
-  display: none;
-}
-
