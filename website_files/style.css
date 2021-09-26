@@ -230,7 +230,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 
 .center-box:empty {
