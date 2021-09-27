@@ -262,7 +262,6 @@ padding:5px;
 .fab.fa-github-square {
   font-size: 40px;
   color: rgb(255, 255, 255);
-  padding: 0 10px 0 0;
 }
 .col.s6.m4 {
   color: rgb(255, 255, 255);
@@ -278,7 +277,6 @@ padding:5px;
 }
 .fab.fa-linkedin {
   font-size: 40px;
-  padding: 0 10px 0 0;
   color: rgb(255, 255, 255);
 }
 .edu {
@@ -466,30 +464,15 @@ padding:5px;
   padding: 10px 10px 10px 10px;
   color: rgb(255, 255, 255);
   background-color: rgb(17, 59, 128);
-  display: table;
   margin-top: 20px;
   margin-left: 10px;
 }
-
-.header_card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 10px 10px 10px 10px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(17, 59, 128);
-  display: table;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
 .links {
-  float:center;
-  position:relative;
-  text-align:center;
+  width:50%;
+  text-align: right;
+  padding-right: 10px;
 }
-img {
+.img {
   border-radius: 5px 5px 0 0;
 }
 
@@ -499,6 +482,43 @@ img {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr .75fr;
+}
+
+.footer {
+  display: table;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 59, 128);
+}
+
+.contact_info {
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 59, 128);
+  display: flex;
+margin: 0px 0px 0px 0px;
+width: 100%;
+padding-top: 20px;
+}
+
+.header_card {
+  display: table;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 59, 128);
+}
+
+.contact_me{
+  text-align: left;
+  align-self: auto;
 }
