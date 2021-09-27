@@ -13,7 +13,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: rgb(210, 213, 217);
+  background-color: rgb(237, 237, 237);
 }
 .row {
   display: table;
@@ -24,7 +24,7 @@ body {
   width: 100%;
   line-height: 24px;
   text-align: justify;
-  background-color: rgb(210, 213, 217);
+  background-color: rgb(237, 237, 237);
 }
 .col:empty,
 #myForm .col:empty {
