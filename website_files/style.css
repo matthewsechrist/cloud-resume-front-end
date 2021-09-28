@@ -117,17 +117,17 @@ p {
 }
 .fab.fa-linkedin:hover {
   background-color: #082032;
-  color: rgb(176, 189, 208);
+  color: #f0a500;
 }
 .fab.fa-github-square:hover {
-  color: rgb(176, 189, 208);
+  color: #f0a500;
 }
 .fas.fa-rss-square {
   color: rgb(255, 255, 255);
   font-size: 40px;
 }
 .fas.fa-rss-square:hover {
-  color: rgb(176, 189, 208);
+  color: #f0a500;
 }
 .c300744 {
   color: #f0a500;
