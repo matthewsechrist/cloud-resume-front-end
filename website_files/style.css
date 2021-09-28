@@ -13,7 +13,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: rgb(237, 237, 237);
+  background-color: #BBBFCA;
 }
 .row {
   display: table;
@@ -23,7 +23,7 @@ body {
   width: 100%;
   line-height: 24px;
   text-align: justify;
-  background-color: rgb(237, 237, 237);
+  background-color: #BBBFCA;
 }
 .col:empty,
 #myForm .col:empty {
@@ -261,6 +261,7 @@ padding:5px;
 .fab.fa-github-square {
   font-size: 40px;
   color: rgb(255, 255, 255);
+  padding-right: 40px;
 }
 .col.s6.m4 {
   color: rgb(255, 255, 255);
@@ -277,31 +278,14 @@ padding:5px;
 .fab.fa-linkedin {
   font-size: 40px;
   color: rgb(255, 255, 255);
+  padding-right: 40px;
 }
 .edu {
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
 }
 .fab.fa-linkedin:hover {
-  border: 0 none rgba(55, 55, 55, 0.73);
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
   color: rgb(176, 189, 208);
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-top-color: rgba(55, 55, 55, 0.73);
-  border-right-color: rgba(55, 55, 55, 0.73);
-  border-bottom-color: rgba(55, 55, 55, 0.73);
-  border-left-color: rgba(55, 55, 55, 0.73);
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
 }
 .fab.fa-github-square:hover {
   color: rgb(176, 189, 208);
@@ -314,7 +298,7 @@ padding:5px;
   color: rgb(176, 189, 208);
 }
 .c300744 {
-  color: rgb(255, 255, 255);
+  color: #F0A500;
   text-align: center;
   font-size: 24px;
 }
@@ -326,10 +310,10 @@ padding:5px;
   min-height: auto;
   text-align: left;
   float: left;
-  color: rgb(255, 212, 154);
+  color:#F0A500;
 }
 .c302805 {
-  color: rgb(255, 212, 154);
+  color: #F0A500;
   font-size: 14px;
   min-height: auto;
   border: 0 none rgba(255, 255, 255, 0);
@@ -359,7 +343,7 @@ padding:5px;
   text-align: left;
 }
 .c31996 {
-  background-color: rgb(210, 213, 217);
+  background-color: #E6E6E6;
   text-align: center;
   display:inline flex;
 }
@@ -438,14 +422,13 @@ padding:5px;
   width: fit-content;
   padding: 10px 10px 10px 10px;
   color: rgb(255, 255, 255);
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
   margin-top: 20px;
   margin-left: 10px;
 }
 .links {
-  width:75%;
+  width:100%;
   text-align: center;
-  padding-right: 10px;
 }
 .img {
   border-radius: 5px 5px 0 0;
@@ -467,12 +450,12 @@ padding:5px;
   line-height: 24px;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
 }
 
 .contact_info {
   color: rgb(255, 255, 255);
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
   display: flex;
 margin: 0px 0px 0px 0px;
 width: 100%;
@@ -486,10 +469,18 @@ padding-top: 20px;
   line-height: 24px;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgb(17, 59, 128);
+  background-color: #082032;
 }
 
 .contact_me{
   text-align: left;
   align-self: auto;
+  line-height: 30px;
+}
+a:link {
+  color: rgb(255, 255, 255); 
+}
+.challenge{
+  color: rgb(255, 255, 255); 
+  text-decoration: underline;
 }
