@@ -431,30 +431,6 @@ padding:5px;
 #if65i {
   display: none;
 }
-@media only screen and (max-width: 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #index-banner .section {
-    top: 0px;
-  }
-}
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -467,8 +443,8 @@ padding:5px;
   margin-left: 10px;
 }
 .links {
-  width:50%;
-  text-align: right;
+  width:75%;
+  text-align: center;
   padding-right: 10px;
 }
 .img {
