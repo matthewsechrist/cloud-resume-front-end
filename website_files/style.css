@@ -256,12 +256,15 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 10px;
-  width: fit-content;
+  width:fit-content;
   padding: 10px 10px 10px 10px;
   color: rgb(255, 255, 255);
   background-color: #082032;
   margin-top: 20px;
   margin-left: 10px;
+  margin-right: 10px;
+  
+  display: table-cell;
 }
 .links {
   width: 100%;
@@ -320,4 +323,12 @@ a:link {
 .challenge {
   color: rgb(255, 255, 255);
   text-decoration: underline;
+}
+
+
+.list_column
+  {
+    display:inline-block;
+    width:300px;
+       vertical-align:top;
 }
