@@ -42,11 +42,6 @@ p {
   color: rgb(255, 255, 255);
   padding-right: 40px;
 }
-.col.s6.m4 {
-  color: rgb(255, 255, 255);
-  text-align: justify;
-  font-size: 11px;
-}
 .fas.fa-phone-square-alt {
   font-size: 18px;
 }
@@ -75,38 +70,19 @@ p {
   font-size: 24px;
 
 }
-.c32555 {
+.header_subtitle {
   font-size: 21px;
   min-height: auto;
   text-align: left;
   float: left;
   color: #f0a500;
 }
-.c302805 {
+.time_subtitle {
   color: #f0a500;
   font-size: 14px;
   min-height: auto;
-  border: 0 none rgba(255, 255, 255, 0);
-  text-align: right;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-top-color: rgba(255, 255, 255, 0);
-  border-right-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0);
-  border-left-color: rgba(255, 255, 255, 0);
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
 }
-.c304482 {
+.card_subheader {
   color: rgb(255, 255, 255);
   font-size: 18px;
   min-height: auto;
