@@ -101,7 +101,7 @@ p {
   margin-right: 10px;
 }
 .links {
-  width: 100%;
+  width: auto;
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ p {
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: #082032;
-  min-width:40%;
+  min-width:230px;
 }
 
 a:link {
