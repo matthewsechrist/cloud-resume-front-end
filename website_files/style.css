@@ -107,7 +107,7 @@ p {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 0.5fr 1fr; 
 }
 
 .footer {
@@ -127,7 +127,8 @@ p {
   padding-top: 20px;
   text-align: left;
   line-height: 30px;
-  min-width: 300px;
+  min-width: 200px;
+  font-size: 14px;
 }
 
 .header_card {
@@ -136,6 +137,7 @@ p {
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: #082032;
+  min-width:400px;
 }
 
 a:link {
@@ -162,10 +164,26 @@ a:link {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  min-height: 200px;
+  min-height: 180px;
   display: inline-block;
   vertical-align: top;
 }
 .education {
   min-width: 500px;
+}
+.header_image {
+  display: flex;
+  background-color: #082032;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-width: 200px;
+  min-height: auto;
+}
+.header_image img {
+  flex-shrink: 0;
+  min-width: auto;
+  min-height: auto;
+  object-fit: cover;
+  background-color: #082032;
 }
