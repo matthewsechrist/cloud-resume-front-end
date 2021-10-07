@@ -7,7 +7,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: #404957;
+  background-color: #145e8c;
 }
 .row {
   padding-top: 10px;
@@ -15,7 +15,7 @@ body {
   padding-bottom: 10px;
   width: 100%;
   line-height: 24px;
-  background-color: #404957;
+  background-color: #145e8c;
 }
 p {
   line-height: 1.5rem;
@@ -39,7 +39,7 @@ p {
 
 .fab.fa-github-square {
   font-size: 40px;
-  color: #404957;
+  color: #145e8c;
   padding-right: 40px;
 }
 .fas.fa-phone-square-alt {
@@ -47,11 +47,11 @@ p {
 }
 .fab.fa-linkedin {
   font-size: 40px;
-  color: #404957;
+  color: #145e8c;
   padding-right: 40px;
 }
 .fab.fa-linkedin:hover {
-  background-color: #c8d4c5;
+  background-color: #dee6e9;
   color: orangered;
 }
 .fab.fa-github-square:hover {
@@ -61,11 +61,11 @@ p {
   color: orangered;
 }
 .fas.fa-rss-square {
-  color: #404957;
+  color: #145e8c;
   font-size: 40px;
 }
 .stand_out_color_text {
-  color: #404957;
+  color: #145e8c;
   text-align: center;
   font-size: 24px;
 }
@@ -74,16 +74,16 @@ p {
   min-height: auto;
   text-align: left;
   float: left;
-  color: #404957;
+  color: #145e8c;
 }
 .time_subtitle {
-  color: #404957;
+  color: #145e8c;
   font-size: 14px;
   min-height: auto;
   float: right;
 }
 .card_subheader {
-  color: #404957;
+  color: #145e8c;
   font-size: 18px;
   min-height: auto;
   text-align: left;
@@ -94,8 +94,8 @@ p {
   border-radius: 10px;
   width: fit-content;
   padding: 10px 10px 10px 10px;
-  color: #404957;
-  background-color: #c8d4c5;
+  color: #145e8c;
+  background-color: #dee6e9;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -116,13 +116,13 @@ p {
   width: 100%;
   line-height: 24px;
   text-align: center;
-  color: #404957;
-  background-color: #c8d4c5;
+  color: #145e8c;
+  background-color: #dee6e9;
 }
 
 .contact_info {
-  color: #404957;
-  background-color: #c8d4c5;
+  color: #145e8c;
+  background-color: #dee6e9;
   margin: 0px 0px 0px 0px;
   padding-top: 20px;
   text-align: left;
@@ -135,16 +135,16 @@ p {
   margin: 0px 0px 0px 0px;
   line-height: 24px;
   text-align: center;
-  color: #404957;
-  background-color: #c8d4c5;
+  color: #145e8c;
+  background-color: #dee6e9;
   min-width:230px;
 }
 
 a:link {
-  color: #404957;
+  color: #145e8c;
 }
 .challenge {
-  color: #404957;
+  color: #145e8c;
   text-decoration: underline;
 }
 
@@ -159,8 +159,8 @@ a:link {
   transition: 0.3s;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  color: #404957;
-  background-color: #c8d4c5;
+  color: #145e8c;
+  background-color: #dee6e9;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -173,7 +173,7 @@ a:link {
 }
 .header_image {
   display: flex;
-  background-color: #c8d4c5;
+  background-color: #dee6e9;
   color: white;
   justify-content: center;
   align-items: center;
@@ -186,5 +186,5 @@ a:link {
   min-width: auto;
   min-height: auto;
   object-fit: cover;
-  background-color: #c8d4c5;
+  background-color: #dee6e9;
 }
