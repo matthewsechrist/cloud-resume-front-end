@@ -127,7 +127,7 @@ p {
   padding-top: 20px;
   text-align: left;
   line-height: 30px;
-  min-width: 30%;
+  min-width: 231px;
   font-size: 14px;
 }
 
@@ -174,11 +174,12 @@ a:link {
 .header_image {
   display: flex;
   background-color: #082032;
+  color: white;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  min-width: 30%;
-  min-height: auto;
+  min-width: 200px;
+  min-height: 200px;
 }
 .header_image img {
   flex-shrink: 0;
