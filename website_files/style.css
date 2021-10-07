@@ -7,7 +7,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: #bbbfca;
+  background-color: #404957;
 }
 .row {
   padding-top: 10px;
@@ -15,7 +15,7 @@ body {
   padding-bottom: 10px;
   width: 100%;
   line-height: 24px;
-  background-color: #bbbfca;
+  background-color: #404957;
 }
 p {
   line-height: 1.5rem;
@@ -39,7 +39,7 @@ p {
 
 .fab.fa-github-square {
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: #404957;
   padding-right: 40px;
 }
 .fas.fa-phone-square-alt {
@@ -47,25 +47,25 @@ p {
 }
 .fab.fa-linkedin {
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: #404957;
   padding-right: 40px;
 }
 .fab.fa-linkedin:hover {
-  background-color: #082032;
-  color: #f0a500;
+  background-color: #c8d4c5;
+  color: orangered;
 }
 .fab.fa-github-square:hover {
-  color: #f0a500;
-}
-.fas.fa-rss-square {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
+  color: orangered;
 }
 .fas.fa-rss-square:hover {
-  color: #f0a500;
+  color: orangered;
+}
+.fas.fa-rss-square {
+  color: #404957;
+  font-size: 40px;
 }
 .stand_out_color_text {
-  color: #f0a500;
+  color: #404957;
   text-align: center;
   font-size: 24px;
 }
@@ -74,16 +74,16 @@ p {
   min-height: auto;
   text-align: left;
   float: left;
-  color: #f0a500;
+  color: #404957;
 }
 .time_subtitle {
-  color: #f0a500;
+  color: #404957;
   font-size: 14px;
   min-height: auto;
   float: right;
 }
 .card_subheader {
-  color: rgb(255, 255, 255);
+  color: #404957;
   font-size: 18px;
   min-height: auto;
   text-align: left;
@@ -94,8 +94,8 @@ p {
   border-radius: 10px;
   width: fit-content;
   padding: 10px 10px 10px 10px;
-  color: rgb(255, 255, 255);
-  background-color: #082032;
+  color: #404957;
+  background-color: #c8d4c5;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -116,13 +116,13 @@ p {
   width: 100%;
   line-height: 24px;
   text-align: center;
-  color: rgb(255, 255, 255);
-  background-color: #082032;
+  color: #404957;
+  background-color: #c8d4c5;
 }
 
 .contact_info {
-  color: rgb(255, 255, 255);
-  background-color: #082032;
+  color: #404957;
+  background-color: #c8d4c5;
   margin: 0px 0px 0px 0px;
   padding-top: 20px;
   text-align: left;
@@ -135,16 +135,16 @@ p {
   margin: 0px 0px 0px 0px;
   line-height: 24px;
   text-align: center;
-  color: rgb(255, 255, 255);
-  background-color: #082032;
+  color: #404957;
+  background-color: #c8d4c5;
   min-width:230px;
 }
 
 a:link {
-  color: rgb(255, 255, 255);
+  color: #404957;
 }
 .challenge {
-  color: rgb(255, 255, 255);
+  color: #404957;
   text-decoration: underline;
 }
 
@@ -159,8 +159,8 @@ a:link {
   transition: 0.3s;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  color: rgb(255, 255, 255);
-  background-color: #082032;
+  color: #404957;
+  background-color: #c8d4c5;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -173,7 +173,7 @@ a:link {
 }
 .header_image {
   display: flex;
-  background-color: #082032;
+  background-color: #c8d4c5;
   color: white;
   justify-content: center;
   align-items: center;
@@ -186,5 +186,5 @@ a:link {
   min-width: auto;
   min-height: auto;
   object-fit: cover;
-  background-color: #082032;
+  background-color: #c8d4c5;
 }
