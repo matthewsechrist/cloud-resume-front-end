@@ -15,16 +15,12 @@ function visitorCounter(){
   fetch("https://ewufbufplbf7vnnjwn6mojnspq.appsync-api.us-east-1.amazonaws.com/graphql", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authentication': 'Apikey da2-aiszdcipufepxgs6532iaxnr6m'
+        'Content-Type': 'application/graphql',
+        'X-API-KEY': 'da2-aiszdcipufepxgs6532iaxnr6m'
       },
       body: JSON.stringify({
-        query: `query MyQuery {
-          visitorInfo(website_name: "") {
-            body
-          }
-        }        
-          `,
+        query: `
+        query  { visitor_counter{ body }}`,
       }),
     })
     .then(response => response.text())
