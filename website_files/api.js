@@ -20,17 +20,17 @@ function visitorCounter(){
       },
       body: JSON.stringify({
         query: `
-        query  { visitor_counter{ body }}`,
+          { visitor_counter{ body } }`,
       }),
     })
     .then(response => response.text())
     .then((body) => {
-  
-      document.getElementById("visitor_count").innerHTML=body;
+      const obj = JSON.parse(body);
+      document.getElementById("visitor_count").innerHTML=obj.data.visitor_counter.body;
     })
     .catch(function(error) {
       console.log(error); 
     });  
   }  
-  //
+  
   visitorCounter();
