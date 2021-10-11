@@ -16,6 +16,7 @@ function visitorCounter(){
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authentication': 'Apikey da2-aiszdcipufepxgs6532iaxnr6m'
       },
       body: JSON.stringify({
         query: `query MyQuery {
