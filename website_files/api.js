@@ -25,8 +25,8 @@ function visitorCounter(){
     })
     .then(response => response.text())
     .then((body) => {
-      const obj = JSON.parse(body);
-      document.getElementById("visitor_count").innerHTML=obj.body;
+  
+      document.getElementById("visitor_count").innerHTML=body;
     })
     .catch(function(error) {
       console.log(error); 
