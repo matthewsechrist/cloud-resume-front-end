@@ -1,6 +1,20 @@
 {
   "name": "visitor_counter_app",
   "version": "1.0.0",
+  "dependencies": {
+
+  "apollo-cache-inmemory": "latest",
+  "apollo-client": "latest",
+  "apollo-link": "latest",
+  "apollo-link-http": "latest",
+  "aws-sdk": "latest",
+  "aws-appsync": "latest",
+  "es6-promise": "latest",
+  "graphql": "latest",
+  "graphql-tag": "latest",
+  "isomorphic-fetch": "latest",
+  "ws": "latest"
+  },
   "description": "visitor_counter_app",
   "main": "index.js",
   "scripts": {
