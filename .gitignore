@@ -1,7 +1,4 @@
-
-.DS_Store
 website_files/.DS_Store
-.DS_Store
 .DS_Store
 appsync/aws-exports.js
 appsync/node_modules/*
