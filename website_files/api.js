@@ -1,5 +1,6 @@
 function visitorCounter(){
-  fetch("https://ouvqczo3q5hohh6vyr5lmxgbhu.appsync-api.us-east-1.amazonaws.com/graphql", {
+//  fetch("https://ouvqczo3q5hohh6vyr5lmxgbhu.appsync-api.us-east-1.amazonaws.com/graphql", {
+    fetch("https://switchfrenzy5i.korconnect.io/Visitor-Counter", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql',
