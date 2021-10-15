@@ -1,42 +1,60 @@
 <html>
-      <head>
-        <title>simple page</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" 
-          crossorigin="anonymous" 
-          referrerpolicy="no-referrer">
-        </script>
-         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-         <script>
-           // This function is an example of how to call your API through KOR Connect
-           function onSubmit(token) {
-             // We'll need this constant to make request
-             const timestamp = new Date().toUTCString();
-             // You need to append the path of the endpoint you are calling to the KOR Connect base URI 
-             axios.post("https://switchfrenzy5i.korconnect.io/visitor/", { headers: {       body: JSON.stringify({
-        query: `
-          { visitor_counter{ body } }`,
-      }),
-token, timestamp, "x-api-key": "g1mKoexDQl1PSIrb5icjXmaGEtlo3IY8qjwkPDy5" } })
-                .then(response => {
-                  console.log(response)
-
-
-                })
-                .catch(error => {
-                  console.log(error)
-                })
-           }
-         </script>
-         <style>
-           /* This is used to hide your Recaptcha badge (please read Recaptcha’s TOS) */
-           .grecaptcha-badge { visibility: collapse !important; }
-         </style>
-      </head>
-      <body>
-        <form id='demo-form' action="?" method="POST">
-          <!-- Oops.... avoid the name="submit" below -->
-          <button class="g-recaptcha" data-sitekey="6Lcavc0cAAAAAEMzG6Yu1yPMwmflXKgT9zaYAZS9" data-callback='onSubmit'>Submit</button>
-          <br/>
-        </form>
-      </body>
-    </html> 
+  <head>
+    <title>simple page</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      // This function is an example of how to call your API through KOR Connect
+      function onSubmit(token) {
+        // We'll need this constant to make request
+        const timestamp = new Date().toUTCString();
+        // You need to append the path of the endpoint you are calling to the KOR Connect base URI
+        axios
+          .post("https://switchfrenzy5i.korconnect.io/visitor/", {
+            headers: {
+              body: JSON.stringify({
+                query: `
+                { visitor_counter{ body } }`,
+              }),
+              token,
+              timestamp,
+              "x-api-key": "g1mKoexDQl1PSIrb5icjXmaGEtlo3IY8qjwkPDy5",
+            },
+          })
+          .then((response) => response.text())
+          .then((body) => {
+            const obj = JSON.parse(body);
+            document.getElementById("visitor_count").innerHTML =
+              obj.data.visitor_counter.body;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    </script>
+    <style>
+      /* This is used to hide your Recaptcha badge (please read Recaptcha’s TOS) */
+      .grecaptcha-badge {
+        visibility: collapse !important;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="demo-form" action="?" method="POST">
+      <!-- Oops.... avoid the name="submit" below -->
+      <button
+        class="g-recaptcha"
+        data-sitekey="6Lcavc0cAAAAAEMzG6Yu1yPMwmflXKgT9zaYAZS9"
+        data-callback="onSubmit"
+      >
+        Submit
+      </button>
+      <br />
+    </form>
+  </body>
+</html>
