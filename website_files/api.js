@@ -1,9 +1,9 @@
 function visitorCounter(){
-    fetch("https://ouvqczo3q5hohh6vyr5lmxgbhu.appsync-api.us-east-1.amazonaws.com/graphql", {
+    fetch("https://tuufqjdvzjfwrdfbvxz2p44auq.appsync-api.us-east-1.amazonaws.com/graphql", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql',
-        'X-API-KEY': 'g1mKoexDQl1PSIrb5icjXmaGEtlo3IY8qjwkPDy5'
+        'X-API-KEY': 'da2-flzuu6sevfezdpi7oosqnhhzf4'
       },
       body: JSON.stringify({
         query: `
