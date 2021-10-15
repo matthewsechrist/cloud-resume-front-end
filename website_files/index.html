@@ -1,61 +1,199 @@
+<!doctype html>
 <html>
-  <head>
-    <title>simple page</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-      // This function is an example of how to call your API through KOR Connect
-      function onSubmit(token) {
-        // We'll need this constant to make request
-        const timestamp = new Date().toUTCString();
-        // You need to append the path of the endpoint you are calling to the KOR Connect base URI
-        axios
-          .post("https://switchfrenzy5i.korconnect.io/visitor/", {
-            headers: {
-              body: JSON.stringify({
-                query: `
-                { visitor_counter{ body } }`,
-              }),
-              token,
-              timestamp,
-              "x-api-key": "g1mKoexDQl1PSIrb5icjXmaGEtlo3IY8qjwkPDy5",
-            },
-          })
-          .then((response) => response.text())
-          .then((body) => {
-            const obj = JSON.parse(body);
-            document.getElementById("visitor_count").innerHTML =
-              obj.data.visitor_counter.body;
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }
-    </script>
-    <style>
-      /* This is used to hide your Recaptcha badge (please read Recaptcha’s TOS) */
-      .grecaptcha-badge {
-        visibility: collapse !important;
-      }
-    </style>
-  </head>
-  <body>
-    <form id="demo-form" action="?" method="POST">
-      <!-- Oops.... avoid the name="submit" below -->
-      <button
-        class="g-recaptcha"
-        data-sitekey="6Lcavc0cAAAAAEMzG6Yu1yPMwmflXKgT9zaYAZS9"
-        data-callback="onSubmit"
-      >
-        Submit
-      </button>
-      <br />
-    </form>
-    <span id="visitor_count"></span>
-  </body>
+
+<head>
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/f7de0c4542.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <title id="title">Matthew Sechrist Cloud Resume
+  </title>
+  <div class="grid-container">
+    <div class="header_card">
+      <h1>Matthew Sechrist</h1>
+      <h3>Computer Scientist | DevOps Enthusiast</h3>
+
+      <div class="links">
+        <a href="https://github.com/MatthewSechrist/" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://linkedin.com/in/matthewsechrist/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://matthewsechristblog.hashnode.dev" target="_blank"><i class="fas fa-rss-square"></i></a>
+      </div>
+    </div>
+    <div class="header_image"><img src="HeaderImage.png" alt="Matthew Sechrist logo"></div>
+
+    <div class="contact_info">
+      <i data-highlightable="1" aria-hidden="true" class="fas fa-phone-square-alt"></i> (757) 663-7007<br>
+      <i data-highlightable="1" aria-hidden="true" class="fas fa-envelope-square"></i>  <a
+        href="mailto:matthew.sechrist@gmail.com">matthew.sechrist@gmail.com</a><br>
+      <i data-highlightable="1" aria-hidden="true" class="fas fa-globe-americas"></i> Norfolk, VA<br>
+      <i data-highlightable="1" aria-hidden="true" class="fas fa-file-pdf"></i> <a href="MatthewSechristResume.pdf"
+        target="_blank" class="challenge"> Download my resume</a><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card">
+      <div class="center-box">
+        <div class="stand_out_color_text">
+          <i data-highlightable="1" aria-hidden="true" class="far fa-address-card">
+          </i> Profile
+        </div>
+      </div>
+      <hr class="solid" />
+      Hello, I am motivated Computer Scientist with 13+ years working in
+      the IT defense industry. The three main areas of responsibility in my current position include resolving complex
+      database/replication issues in an enterprise RDBMS environment, teaching coworkers database administration best
+      practices, and helping senior leadership make data-driven decisions by developing detailed reports. I am seeking a
+      software company to move into a DevSecOps Engineer role.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <div class="center-box">
+        <div class="stand_out_color_text"><i data-highlightable="1" aria-hidden="true" class="fas fa-code">
+          </i> Current Project
+        </div>
+      </div>
+      <hr class="solid" />
+
+      <div class="header_subtitle">Cloud Resume Challenge
+      </div>
+      <div class="time_subtitle"><i class="far fa-clock"></i> Sep 2021
+      </div>
+      <div>
+        <br>
+        <p>Completed the Cloud Resume Challenge put out by Forrest Brazeal found <a class="challenge" href="https://cloudresumechallenge.dev" target="_blank">here</a>. This website is the result of this project, for more information please read my blog post <a class="challenge" href="https://example.com" target="_blank">here</a>.</p>
+        
+        <p>
+          This challenge required me to learn new technologies I've never dealt with. Reading books along with taking online classes are the best
+          way for me to learn new material. I took A Cloud Guru classes to learn the basics of Python, Terraform and
+          GitHub. I read The DevOps Handbook and The Unicorn Project by Gene Kim, both very informative reads on the
+          basics of DevOps.</p>
+
+        <p> Creating my resume as a static
+          website hosted on AWS S3 provided me hands-on experience with the below AWS-specific and cloud platform
+          agnostic tools:</p>
+        
+          <div class="list_row">
+          <div class="list_column">
+            <ul>
+              <li>AWS S3</li>
+              <li>AWS CloudFront</li>
+              <li>AWS Route 53</li>
+              <li>AWS IAM</li>
+              <li>AWS Lambda</li>
+              <li>AWS DynamoDB</li>
+              <li>AWS AppSync</li>
+            </ul>
+          </div>
+
+          <div class="list_column">
+            <ul>
+              <li>Terraform</li>
+              <li>Python</li>
+              <li>GitHub Actions</li>
+              <li>Cypress testing framework</li>
+              <li>GraphQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <div class="center-box">
+        <div class="stand_out_color_text">
+          <i data-highlightable="1" aria-hidden="true" class="far fa-address-card">
+          </i> Work Experience
+        </div>
+      </div>
+      <hr class="solid" />
+      <div class="edu">
+        <div class="header_subtitle">Computer Scientist
+        </div>
+        <div class="time_subtitle"><i class="far fa-clock"></i> Sep 2008 to Present  
+        </div>
+        <div class="card_subheader"><br>
+          Naval Information Warfare Center, Norfolk, VA
+        </div>
+        <div class="Education-Minor">
+
+          <p>Provide senior-level SAP Database/Replication support for a mission-critical Naval aviation maintenance
+            application with the follow responsibilities:
+            Resolving complex database and Windows Server issues running SQL and PowerShell queries Automating proactive
+            sustainment actions to reduce incident creation
+            Interface with developers using Agile practices creating stored procedures to increase database performance
+            Writing database administration best practices and procedures for junior team members
+          </p>
+          <p>Lead Analytics Report Developer empowering senior management making critical personnel/financial decisions
+            developing these complex reports:
+          <ul>
+            <li><b>Personnel Check-In/Check-Out Report</b> - Series of reports that pinpoint issues and trends through
+              the on-boarding process resulting in average lead time from over 90 days to 11 days</li>
+            <li><b>Heads Up Display</b> - Series of recurring reports highlighting database/application issues in over
+              2,500 average incidents per month helping keep our mean time to resolution to less than 3 days</li>
+            <li><b>Customer Survey Report</b> - Report that displays average customer satisfaction using the customer
+              satisfaction index and illuminates unmet customer services goals</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="certs">
+      <div class="center-box">
+        <div class="stand_out_color_text"><i data-highlightable="1" aria-hidden="true" class="fas fa-award">
+          </i> Certifications
+        </div>
+      </div>
+      <hr class="solid" />
+
+      <div class="images">
+        <img src="AWS-SysOpAdmin-Associate-2020.png" alt="AWS SysOps Architect Certified" width="100" height="100"
+          class="center" />
+        <img src="AWS-SolArchitect-Associate-2020.png" alt="AWS Solutions Architect Certified" width="100" height="100"
+          class="center" />
+        <img src="SecurityPlusLogo.png" alt="CompTIA Security+ Certified" width="100" height="100" class="center" />
+        <img src="NetworkPlusLogo.png" alt="CompTIA Network+ Certified" width="100" height="100" class="center" />
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="certs">
+      <div class="center-box">
+        <div class="education"></div>
+        <div class="stand_out_color_text"><i class="fas fa-university">
+          </i> Education
+        </div>
+      </div>
+      <hr class="solid" />
+      <div class="header_subtitle">James Madison University
+      </div>
+      <div class="time_subtitle">May 2007  
+      </div><br><br>
+      <div class="card_subheader">Computer Science<br>
+      </div>
+      <div class="Education-Minor">Telecommunications Minor
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <script type="text/javascript" src="api.js"></script>
+    <p class="grey-text text-lighten-4">Number of Visits: 
+      <span id="visitor_count"></span>
+    </p>
+  </div>
+</body>
 </html>
