@@ -1,5 +1,5 @@
 function visitorCounter(){
-    fetch("https://api.matthewsechrist.cloud", {
+    fetch("https://api.matthewsechrist.cloud/appsync", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql',
