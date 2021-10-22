@@ -1,6 +1,6 @@
 describe('API Gateway Test', () => {
     it.only('Visitor Test - GET Method', () => {
-      cy.request('https://2q4tyukeqb.execute-api.us-east-1.amazonaws.com')
+      cy.request('https://api.matthewsechrist.cloud/graphql')
     })
   })
 
