@@ -1,17 +1,14 @@
-describe('API Gateway Test', () => {
-    it.only('Visitor Test - GET Method', () => {
-      cy.request('https://api.matthewsechrist.cloud/graphql')
+//This Cypress test checks the JSON response body of the API call for the visitor counter
+describe('GraphQL POST Request internal to API Gateway Test', () => {
+  const query = `{ visitor_counter{ body }}`;
+    it.only('Visitor Counter POST Request', () => {      
+      cy.request({
+        method: "post",
+        url: 'https://api.matthewsechrist.cloud/graphql',
+        body: { query : query },
+      }).then((res) => {
+        expect(res.body.data.visitor_counter).to.have.property('body')
+        cy.log(res.body);
+      });
     })
-  })
-
-  describe('Naked Domain Test', () => {
-    it.only('Index.html Test', () => {
-      cy.request('https://matthewsechrist.cloud')
-    })
-  })
-
-describe('www Domain Test', () => {
-    it.only('Index.html Test', () => {
-      cy.request('www.matthewsechrist.cloud')
-    })
-  })
+  }) 
