@@ -9,7 +9,15 @@
   <link href="assets/css/all.css" rel="stylesheet" 
   integrity="7rgjkhkxJ95zOzIjk97UrBOe14KgYpH9+zQm5BdgzjQELBU6kHf4WwoQzHfTx5sw"  crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HQHYSH17Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5HQHYSH17Q');
+</script>
   <link rel="stylesheet" href="assets/css/style.css" integrity="f0FRaNp7hZIf/GGeKUcu2IoyQj6U0IA/bu+2yAxje6wbR7cWdhN4XWfjP4LExlJI" crossorigin="anonymous">
 </head>
 
@@ -192,17 +200,6 @@
   </div>
 
   <div class="footer">
-    <script>
-      function onSubmit(token) {
-        document.getElementById("demo-form").submit();
-      }
-    </script>
-
-<button class="g-recaptcha" 
-data-sitekey="6LcVNR4dAAAAAJPADIDzOuQ0A9UAroab2b628nmh" 
-data-callback='onSubmit' 
-data-action='submit'>Submit</button>
-
     <script type="text/javascript" src="assets/js/api.js"
     integrity="sha384-pZc6CR59M83NtbWnSvKPx8Vy0460xZVPItFhXKDST0TNMz6WZlwwPX+YaGRj59LY" crossorigin="anonymous"></script>
     <p class="grey-text text-lighten-4">Number of Visits: 
