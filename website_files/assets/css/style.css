@@ -94,7 +94,7 @@ p {
   width: fit-content;
   padding: 10px 10px 10px 10px;
   color: #1e1d1d;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -116,12 +116,12 @@ p {
   line-height: 24px;
   text-align: center;
   color: #1e1d1d;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
 }
 
 .contact_info {
   color: #1e1d1d;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
   margin: 0px 0px 0px 0px;
   padding-top: 20px;
   text-align: left;
@@ -135,7 +135,7 @@ p {
   line-height: 24px;
   text-align: center;
   color: #1e1d1d;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
   min-width:230px;
 }
 
@@ -159,7 +159,7 @@ a:link {
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   color: #1e1d1d;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -172,7 +172,7 @@ a:link {
 }
 .header_image {
   display: flex;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
   color: white;
   justify-content: center;
   align-items: center;
@@ -185,5 +185,5 @@ a:link {
   min-width: auto;
   min-height: auto;
   object-fit: cover;
-  background-color: #edf6f9;
+  background-color: #cbe5f7;
 }
