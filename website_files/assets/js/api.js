@@ -5,8 +5,7 @@ function visitorCounter(){
         'Content-Type': 'application/graphql',
       },
       body: JSON.stringify({
-        query: `
-          { visitor_counter{ body } }`,
+        query: `{visitor_counter{body}}`,
       }),
     })
     .then(response => response.text())
