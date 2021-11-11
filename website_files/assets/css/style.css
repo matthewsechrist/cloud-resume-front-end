@@ -164,7 +164,7 @@ a:link {
   margin-left: 10px;
   margin-right: 10px;
   min-height: 180px;
-  display: inline-block;
+  display: left;
   vertical-align: top;
 }
 .education {
@@ -186,4 +186,11 @@ a:link {
   min-height: auto;
   object-fit: cover;
   background-color: #252422;
+}
+
+.white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(100%) saturate(100%) invert(48%) sepia(79%) hue-rotate(86deg) contrast(119%);
 }
