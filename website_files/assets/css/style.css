@@ -101,12 +101,12 @@ p {
 }
 .links {
   width: auto;
-  text-align: center;
+  text-align: right;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
 }
 
 .footer {
@@ -173,12 +173,12 @@ a:link {
 .header_image {
   display: flex;
   background-color: #252422;
-  color: white;
+  color: yellow;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  min-width: 200px;
-  min-height: 200px;
+  /*min-width: 200px;
+  min-height: 200px;*/
 }
 .header_image img {
   flex-shrink: 0;
