@@ -101,17 +101,19 @@ p {
 }
 .links {
   width: auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr; 
 }
 
 .grid-body {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
 }
 
 .footer {
@@ -165,7 +167,6 @@ a:link {
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
   background-color: #252422;
-  margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
   min-height: 180px;
@@ -197,5 +198,4 @@ a:link {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: brightness(100%) saturate(100%) invert(48%) sepia(79%) hue-rotate(86deg) contrast(119%);
 }
