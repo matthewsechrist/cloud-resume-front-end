@@ -33,8 +33,7 @@ p {
   padding: 5px;
 }
 .images {
-  display: block;
-  padding-right: 10em;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
