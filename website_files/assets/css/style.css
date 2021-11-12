@@ -13,7 +13,7 @@ body {
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  max-width: 600px;
+  max-width: 400px;
   line-height: 24px;
   /**background-image: linear-gradient(to bottom right, red, yellow);*/
 }
@@ -176,6 +176,7 @@ a:link {
   margin-left: 10px;
   margin-right: 10px;
   min-height: 180px;
+  min-width: 400px;
   display: left;
   vertical-align: top;
 }
