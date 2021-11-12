@@ -140,6 +140,7 @@ p {
   display: left;
   vertical-align: top;
   min-width: 400px;
+  max-width: 400px;
 }
 
 .header_card {
