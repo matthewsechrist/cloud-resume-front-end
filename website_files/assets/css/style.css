@@ -103,7 +103,7 @@ p {
   max-width:800px;
 }
 .links {
-  width:auto;
+  width:400px;
   display:flex;
   justify-content: center;
 }
