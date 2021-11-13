@@ -14,8 +14,8 @@ body {
   padding-right: 10px;
   padding-bottom: 10px;
   min-width: 350px;
-  /*max-width: 600px;
-  line-height: 24px;
+  max-width: 600px;
+  /*line-height: 24px;
   /**background-image: linear-gradient(to bottom right, red, yellow);*/
 }
 p {
@@ -98,11 +98,12 @@ p {
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
   background-color: #252422;
-  margin-top: 75px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 50px;
   min-width: 300px;
+  max-width: 600px;
 }
 
 .profile {
