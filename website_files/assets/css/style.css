@@ -10,9 +10,11 @@ body {
   background: #403d39;
 }
 .row {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-right: 10px;
   padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
   min-width: 350px;
   max-width: 600px;
   /*line-height: 24px;
@@ -101,7 +103,7 @@ p {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   min-width: 100px;
   max-width: 600px;
 }
@@ -131,8 +133,8 @@ p {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 610px 300px;
-  grid-template-rows: 200px 1fr; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 1fr; 
 }
 
 .grid-body {
