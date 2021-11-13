@@ -17,6 +17,7 @@ body {
   margin-bottom: 10px;
   min-width: 350px;
   max-width: 600px;
+  max-height: 400px;
   /*line-height: 24px;
   /**background-image: linear-gradient(to bottom right, red, yellow);*/
 }
@@ -161,7 +162,7 @@ p {
   background-color: #252422;
   margin-left: 10px;
   min-height: 180px;
-  display: right;
+  display: left;
   vertical-align: top;
   min-width: 400px;
   max-width: 400px;
