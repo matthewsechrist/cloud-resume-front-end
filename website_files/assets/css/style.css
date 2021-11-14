@@ -130,6 +130,9 @@ p {
   /*width:400px;*/
   display:flex;
   justify-content: center;
+  display: left;
+  vertical-align: top;
+
 }
 
 .grid-container {
