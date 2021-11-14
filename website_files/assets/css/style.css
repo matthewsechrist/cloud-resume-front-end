@@ -98,7 +98,6 @@ p {
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
   background-color: #252422;
-  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -114,7 +113,7 @@ p {
   background-color: #252422;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
   min-width: 300px;
   width:auto;
@@ -234,6 +233,6 @@ a:link {
 
 .grid-container > div {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size:initial;
 }
