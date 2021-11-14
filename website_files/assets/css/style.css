@@ -227,12 +227,12 @@ a:link {
     'header header header '
     'main main right'
     'footer footer footer';
-  grid-gap: 10px;
-  padding: 10px;
+  /**grid-gap: 10px;
+  padding: 10px;*/
 }
 
 .grid-container > div {
   text-align: center;
-  padding: 10px 0;
+  /*padding: 10px 0;*/
   font-size:initial;
 }
