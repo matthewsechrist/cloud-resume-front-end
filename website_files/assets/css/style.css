@@ -161,6 +161,7 @@ p {
   margin-right: 10px;
   margin-bottom: 10px;
   min-width: 300px;
+  max-width: 400px;
 }
 
 .header_card {
