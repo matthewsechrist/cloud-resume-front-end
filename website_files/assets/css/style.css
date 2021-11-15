@@ -117,6 +117,7 @@ p {
   margin-bottom: 10px;
   min-width: 300px;
   width:auto;
+  display: flex;
 }
 
 
@@ -163,6 +164,7 @@ p {
   margin-bottom: 10px;
   min-width: 300px;
   width:auto;
+  display: flex;
 }
 
 .header_card {
