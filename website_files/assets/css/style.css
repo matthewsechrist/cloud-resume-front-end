@@ -109,6 +109,11 @@ p {
   min-width: 300px;
 }
 
+.icons {
+  color: #fffcf2;
+  min-width: 300px;
+}
+
 
 
 .links {
@@ -116,11 +121,18 @@ p {
   display:flex;
   justify-content: center;
   vertical-align: top;
+
+  margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+max-width: 500px;
 }
 
 .contact {
   display: block;
   justify-content: left;
+  text-align: left;
 }
 
 .grid-container {
@@ -215,9 +227,9 @@ a:link {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header '
-    'right main main'
-    'footer footer footer';
+    'header header'
+    'right main'
+    'footer footer';
   grid-gap: 10px;
   padding: 10px;
 }
