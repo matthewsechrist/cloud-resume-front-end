@@ -7,7 +7,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background: #403d39;
+  background: #355070;
 }
 .row {
 /**  position: relative;*/
@@ -48,20 +48,20 @@ p {
   padding-right: 40px;
 }
 .fab.fa-linkedin:hover {
-  color: #eb5e28;
+  color: #ff652f;
 }
 .fab.fa-github-square:hover {
-  color: #eb5e28;
+  color: #ff652f;
 }
 .fas.fa-rss-square:hover {
-  color: #eb5e28;
+  color: #ff652f;
 }
 .fas.fa-rss-square {
   color: #fffcf2;
   font-size: 40px;
 }
 .stand_out_color_text {
-  color: #fffcf2;
+  color: #ffe400;
   text-align: center;
   font-size: 24px;
 }
@@ -89,7 +89,7 @@ p {
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
-  background-color: #252422;
+  background-color: #272727;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -101,7 +101,7 @@ p {
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
-  background-color: #252422;
+  background-color: #272727;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 40px;
@@ -154,7 +154,7 @@ max-width: 500px;
   line-height: 24px;
   text-align: center;
   color: #fffcf2;
-  background-color: #252422;
+  background-color: #272727;
 }
 
 .contact_info {
@@ -162,7 +162,7 @@ max-width: 500px;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   color: #fffcf2;
-  background-color: #252422;
+  background-color: #272727;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -177,7 +177,7 @@ max-width: 500px;
   line-height: 24px;
   text-align: center;
   color: #fffcf2;
-  background-color: #252422;
+  background-color: #272727;
   min-width:230px;
 }
 
@@ -200,8 +200,7 @@ a:link {
 }
 .header_image {
   display: flex;
-  background-color: #252422;
-  color: yellow;
+  background-color: #272727;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -211,11 +210,11 @@ a:link {
   min-width: auto;
   min-height: auto;
   object-fit: cover;
-  background-color: #252422;
+  background-color: #272727;
 }
 
 .white {
-  display: block;
+  display:block;
   align-items: center;
   justify-content: center;
   color: white;
