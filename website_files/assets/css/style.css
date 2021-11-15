@@ -103,8 +103,6 @@ p {
   margin-right: 10px;
   margin-bottom: 10px;
   /* min-width: 300px;*/
-   width:auto;
-   position: relative;
 }
 
 .profile {
@@ -125,10 +123,14 @@ p {
 .links {
   /*width:400px;*/
   display:flex;
-  justify-content: left;
-  display: left;
+  justify-content: center;
+  display: center;
   vertical-align: top;
 
+}
+
+.contact {
+  justify-content: left;
 }
 
 .grid-container {
