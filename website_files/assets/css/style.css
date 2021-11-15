@@ -130,7 +130,9 @@ p {
 }
 
 .contact {
+  display: left;
   justify-content: left;
+  text-justify: left;
 }
 
 .grid-container {
