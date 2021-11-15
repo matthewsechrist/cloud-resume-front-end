@@ -10,16 +10,7 @@ body {
   background: #403d39;
 }
 .row {
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  margin-bottom: 10px;
-  position: relative;
-  /*min-width: 350px;
-  max-width: 600px;
-  max-height: 400px;
-  /*line-height: 24px;
-  /**background-image: linear-gradient(to bottom right, red, yellow);*/
+/**  position: relative;*/
 }
 p {
   line-height: 1.5rem;
@@ -124,15 +115,12 @@ p {
   /*width:400px;*/
   display:flex;
   justify-content: center;
-  display: center;
   vertical-align: top;
-
 }
 
 .contact {
-  display: left;
+  display: block;
   justify-content: left;
-  text-justify: left;
 }
 
 .grid-container {
