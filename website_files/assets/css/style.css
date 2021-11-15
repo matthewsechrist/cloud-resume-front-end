@@ -112,6 +112,8 @@ p {
 .icons {
   color: #fffcf2;
   min-width: 300px;
+  text-align: justify;
+  align-items: justify;
 }
 
 
