@@ -111,18 +111,17 @@ p {
 
 .icons {
   color: #fffcf2;
-  min-width: 300px;
-  text-align: justify;
-  align-items: justify;
+  min-width: 400px;
+  max-width: 400px;
+  position:relative;
 }
 
 
 
 .links {
   /*width:400px;*/
-  display:flex;
+  display:block;
   justify-content: center;
-  vertical-align: top;
 
   margin-top: 0px;
 margin-right: auto;
@@ -169,6 +168,7 @@ max-width: 500px;
   margin-bottom: 10px;
   min-width: 400px;
   max-width: 400px;
+  position:relative;
   /*width:auto;*/
 }
 
@@ -229,9 +229,9 @@ a:link {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header'
-    'right main'
-    'footer footer';
+    'header header header'
+    'right main main'
+    'footer footer footer';
   grid-gap: 10px;
   padding: 10px;
 }
