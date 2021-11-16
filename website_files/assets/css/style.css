@@ -7,7 +7,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background: #355070;
+  background: #054a91;
 }
 .row {
 /**  position: relative;*/
@@ -36,7 +36,7 @@ p {
 
 .fab.fa-github-square {
   font-size: 40px;
-  color: #fffcf2;
+  color: white;
   padding-right: 40px;
 }
 .fas.fa-phone-square-alt {
@@ -44,20 +44,20 @@ p {
 }
 .fab.fa-linkedin {
   font-size: 40px;
-  color: #fffcf2;
+  color: white;
   padding-right: 40px;
 }
 .fab.fa-linkedin:hover {
-  color: #ff652f;
+  color: #eb5e28;
 }
 .fab.fa-github-square:hover {
-  color: #ff652f;
+  color: #eb5e28;
 }
 .fas.fa-rss-square:hover {
-  color: #ff652f;
+  color: #eb5e28;
 }
 .fas.fa-rss-square {
-  color: #fffcf2;
+  color: white;
   font-size: 40px;
 }
 .stand_out_color_text {
@@ -91,7 +91,6 @@ p {
   color: #fffcf2;
   background-color: #272727;
   margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 10px;
   /* min-width: 300px;*/
 }
@@ -213,21 +212,23 @@ a:link {
 
 .white {
   display:block;
-  align-items: center;
-  justify-content: center;
+align-items:center;
+align-self: center;
+text-align: center;
+justify-content: center;
   color: white;
 }
 
 .item1 { grid-area: header; }
-.item3 { grid-area: right; }
-.item4 { grid-area: main; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
 .item5 { grid-area: footer; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header'
-    'right main main'
+    'main right right'
     'footer footer footer';
   grid-gap: 10px;
   padding: 10px;
@@ -237,4 +238,7 @@ a:link {
   text-align: center;
   /*padding: 10px 0;*/
   font-size:initial;
+}
+.name {
+  font-size:10px;
 }
