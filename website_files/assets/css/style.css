@@ -7,11 +7,14 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background: #054a91;
+  background: #393E46;
 }
-.row {
-/**  position: relative;*/
+h2 {
+margin:0px;
+padding: 0px;
 }
+
+
 p {
   line-height: 1.5rem;
 }
@@ -36,7 +39,7 @@ p {
 
 .fab.fa-github-square {
   font-size: 40px;
-  color: white;
+  color: #eb5e28;
   padding-right: 40px;
 }
 .fas.fa-phone-square-alt {
@@ -44,7 +47,7 @@ p {
 }
 .fab.fa-linkedin {
   font-size: 40px;
-  color: white;
+  color: #eb5e28;
   padding-right: 40px;
 }
 .fab.fa-linkedin:hover {
@@ -57,7 +60,7 @@ p {
   color: #eb5e28;
 }
 .fas.fa-rss-square {
-  color: white;
+  color: #eb5e28;
   font-size: 40px;
 }
 .stand_out_color_text {
@@ -70,16 +73,16 @@ p {
   min-height: auto;
   text-align: left;
   float: left;
-  color: #fffcf2;
+  color: #EEEEEE;
 }
 .time_subtitle {
-  color: #fffcf2;
+  color: #EEEEEE;
   font-size: 14px;
   min-height: auto;
   float: right;
 }
 .card_subheader {
-  color: #fffcf2;
+  color: #EEEEEE;
   font-size: 18px;
   min-height: auto;
   text-align: left;
@@ -88,7 +91,7 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  color: #fffcf2;
+  color: #EEEEEE;
   background-color: #272727;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -99,7 +102,7 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  color: #fffcf2;
+  color: #EEEEEE;
   background-color: #272727;
   margin-left: 10px;
   margin-top: 40px;
@@ -108,7 +111,7 @@ p {
 }
 
 .icons {
-  color: #fffcf2;
+  color: #EEEEEE;
   min-width: 400px;
   max-width: 400px;
   position:relative;
@@ -151,7 +154,7 @@ max-width: 500px;
   width: 100%;
   line-height: 24px;
   text-align: center;
-  color: #fffcf2;
+  color: #EEEEEE;
   background-color: #272727;
 }
 
@@ -159,7 +162,7 @@ max-width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  color: #fffcf2;
+  color: #EEEEEE;
   background-color: #272727;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -173,16 +176,16 @@ max-width: 500px;
   margin: 0px 0px 0px 0px;
   line-height: 24px;
   text-align: center;
-  color: #fffcf2;
+  color: #EEEEEE;
   background-color: #272727;
   min-width:230px;
 }
 
 a:link {
-  color: #fffcf2;
+  color: #EEEEEE;
 }
 .challenge {
-  color: #fffcf2;
+  color: #EEEEEE;
   text-decoration: underline;
 }
 
@@ -216,11 +219,14 @@ align-items:center;
 align-self: center;
 text-align: center;
 justify-content: center;
-  color: white;
 }
 
-.item1 { grid-area: header; }
-.item3 { grid-area: main; }
+.item1 { 
+  grid-area: header;
+}
+.item3 { 
+  grid-area: main; 
+}
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
 
