@@ -277,6 +277,6 @@ grid-area: AWS_services;
 }
 
 
-@media all and (orientation:portrait) {
+@media (orientation:portrait) {
 item4{display:none}
 } 
