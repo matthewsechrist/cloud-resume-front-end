@@ -7,7 +7,7 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background: #393E46;
+  background: #343a40;
 }
 h2 {
 margin:0px;
@@ -107,7 +107,7 @@ p {
   margin-left: 10px;
   margin-top: 40px;
   margin-bottom: 10px;
-  min-width: 300px;
+  min-width: 400px;
   text-align: justify;
 }
 
@@ -141,6 +141,12 @@ max-width: 500px;
 }
 
 .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*grid-template-rows: 1fr 200px; */
+}
+
+.grid-services {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /*grid-template-rows: 1fr 200px; */
@@ -193,9 +199,8 @@ a:link {
 }
 
 .list_column {
-  display: inline-block;
-  width: 300px;
-  vertical-align: top;
+  text-justify: left;
+  justify-content: left;
 }
 
 .education {
@@ -244,8 +249,23 @@ color: white;
   padding: 10px;
 }
 
+.AWS_services {
+grid-area: AWS_services;
+}
+
+.non_AWS_services {
+  grid-area: non_AWS_services;
+}
+.grid-services {
+  display: grid;
+  grid-template-areas:
+    'AWS_services non_AWS_services';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
 .grid-container > div {
-  text-align: center;
+  /*text-align: center;
   /*padding: 10px 0;*/
   font-size:initial;
 }
