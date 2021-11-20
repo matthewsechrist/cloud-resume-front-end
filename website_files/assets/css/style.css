@@ -118,10 +118,13 @@ p {
   position:relative;
 }
 
-.Education-Minor {
-  text-align: justify;
+.education-minor {
+  text-align: left;
 }
 
+.card_body {
+  text-align: justify;
+}
 .links {
   /*width:400px;*/
   display:block;
@@ -230,10 +233,10 @@ justify-content: center;
 color: white;
 }
 
-.item1 { 
+.header { 
   grid-area: header;
 }
-.item3 { 
+.main_body { 
   grid-area: main; 
 }
 .item4 { grid-area: right; }
@@ -272,3 +275,8 @@ grid-area: AWS_services;
 .name {
   font-size:10px;
 }
+
+
+@media all and (orientation:portrait) {
+#item4{display:none}
+} 
