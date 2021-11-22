@@ -8,7 +8,7 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    background: #343a40;
+    background: #d8e2dc;
 }
 
 h2 {
@@ -184,7 +184,7 @@ p {
     line-height: 24px;
     text-align: center;
     color: #EEEEEE;
-    background-color: #272727;
+    background-color: #0b525b;
 }
 
 .contact_info {
@@ -251,12 +251,12 @@ a:link {
     text-align: center;
     justify-content: center;
     color: white;
-    background-color: lightseagreen;
+    background-color: #0b525b;
 }
 
 .header {
     /*grid-area: header;*/
-    background-color: lightseagreen;
+    background-color: #0b525b;
 }
 
 .main_body {
