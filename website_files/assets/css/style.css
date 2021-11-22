@@ -85,18 +85,18 @@ p {
     min-height: auto;
     text-align: left;
     float: left;
-    color: #EEEEEE;
+    color: #eeeeee;
 }
 
 .time_subtitle {
-    color: #EEEEEE;
+    color: #eeeeee;
     font-size: 14px;
     min-height: auto;
     float: right;
 }
 
 .card_subheader {
-    color: #EEEEEE;
+    color: #eeeeee;
     font-size: 18px;
     min-height: auto;
     text-align: left;
@@ -106,7 +106,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
-    color: #EEEEEE;
+    color: #eeeeee;
     background-color: #272727;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -118,7 +118,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
-    color: #EEEEEE;
+    color: #eeeeee;
     background-color: #272727;
     margin-left: 10px;
     margin-top: 40px;
@@ -129,7 +129,7 @@ p {
 }
 
 .icons {
-    color: #EEEEEE;
+    color: #eeeeee;
     min-width: 400px;
     max-width: 400px;
     position: relative;
@@ -183,7 +183,7 @@ p {
     width: 100%;
     line-height: 24px;
     text-align: center;
-    color: #EEEEEE;
+    color: #eeeeee;
     background-color: #0b525b;
 }
 
@@ -191,7 +191,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
-    color: #EEEEEE;
+    color: #eeeeee;
     background-color: #272727;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -205,17 +205,17 @@ p {
     margin: 0px 0px 0px 0px;
     line-height: 24px;
     text-align: center;
-    color: #EEEEEE;
+    color: #eeeeee;
     background-color: #272727;
     min-width: 230px;
 }
 
 a:link {
-    color: #EEEEEE;
+    color: #eeeeee;
 }
 
 .challenge {
-    color: #EEEEEE;
+    color: #eeeeee;
     text-decoration: underline;
 }
 
@@ -273,7 +273,7 @@ a:link {
 
 .grid-container {
     display: grid;
-    grid-template-areas: 'main right right';
+    grid-template-areas: "main right right";
     grid-gap: 10px;
     padding: 10px;
 }
@@ -288,7 +288,7 @@ a:link {
 
 .grid-services {
     display: grid;
-    grid-template-areas: 'AWS_services non_AWS_services';
+    grid-template-areas: "AWS_services non_AWS_services";
     grid-gap: 10px;
     padding: 10px;
 }
@@ -303,8 +303,34 @@ a:link {
     font-size: 10px;
 }
 
-@media (orientation:portrait) {
+@media (orientation: portrait) {
     .item4 {
-        display: none
+        display: none;
+    }
+    .profile {
+        width: 90vw;
+        margin: 10px 5px 10px 5px;
+    }
+    .row {
+        width: 90vw;
+        margin: 10px 5px 10px 5px;
+    }
+    .card {
+        width: 90vw;
+        margin: 10px 5px 10px 5px;
+    }
+    .icons_centered {
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        justify-content: center;
+        color: black;
+        background-color: #d8e2dc;
+    }
+}
+
+@media (orientation: landscape) {
+    .icons_centered {
+        display: none;
     }
 }
