@@ -8,7 +8,7 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    background: #d8e2dc;
+    background: #eeeeee;
 }
 
 h2 {
@@ -44,19 +44,17 @@ p {
 
 .fab.fa-github-square,
 .fas.fa-rss-square,
-.fab.fa-linkedin {
+.fab.fa-linkedin,
+.fas.fa-file-pdf {
     font-size: 40px;
     color: #e76f51;
     padding: 0px 20px 0px 20px;
 }
 
-.fas.fa-phone-square-alt {
-    font-size: 18px;
-}
-
 .fab.fa-linkedin:hover,
 .fab.fa-github-square:hover,
-.fas.fa-rss-square:hover {
+.fas.fa-rss-square:hover,
+.fas.fa-file-pdf:hover {
     color: #e9c46a;
 }
 
@@ -88,18 +86,7 @@ p {
     text-align: left;
 }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 10px 10px 10px 10px;
-    color: #eeeeee;
-    background-color: #272727;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    /* min-width: 300px;*/
-    display: block;
-}
-
+.card,
 .profile {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -107,9 +94,7 @@ p {
     color: #eeeeee;
     background-color: #272727;
     margin-left: 10px;
-    margin-top: 40px;
     margin-bottom: 10px;
-    /*min-width: 400px;*/
     display: block;
     text-align: justify;
 }
@@ -131,7 +116,6 @@ p {
 }
 
 .links {
-    /*width:400px;*/
     display: block;
     justify-content: center;
     margin-top: 0px;
@@ -147,16 +131,10 @@ p {
     text-align: left;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /*grid-template-rows: 1fr 200px; */
-}
-
+.grid-container,
 .grid-services {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /*grid-template-rows: 1fr 200px; */
 }
 
 .grid-body {
@@ -237,7 +215,7 @@ a:link {
     align-self: center;
     text-align: center;
     justify-content: center;
-    color: white;
+    color: #eeeeee;
     background-color: #002233;
 }
 
@@ -280,37 +258,26 @@ a:link {
     padding: 10px;
 }
 
-.grid-container>div {
-    /*text-align: center;
-  /*padding: 10px 0;*/
-    font-size: initial;
-}
-
-.name {
-    font-size: 10px;
+td {
+    text-align: center;
+    color: #eeeeee;
 }
 
 @media (orientation: portrait) {
     .item4 {
         display: none;
     }
-    .profile {
-        width: 90vw;
-        margin: 10px 5px 10px 5px;
-    }
-    .row {
-        width: 90vw;
-        margin: 10px 5px 10px 5px;
-    }
+    .profile,
+    .row,
     .card {
         width: 90vw;
-        margin: 10px 5px 10px 5px;
+        margin: 10px 10px 10px 10px;
     }
     .icons_centered {
-        color: black;
-        background-color: #d8e2dc;
+        background-color: #eeeeee;
         justify-content: space-evenly;
         display: flex;
+        margin-top: 5px;
     }
 }
 
