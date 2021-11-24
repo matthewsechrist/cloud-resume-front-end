@@ -240,7 +240,7 @@ a:link {
     display: grid;
     grid-template-areas: "main right right";
     grid-gap: 10px;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 .AWS_services {
@@ -254,7 +254,6 @@ a:link {
 .grid-services {
     display: grid;
     grid-template-areas: "AWS_services non_AWS_services";
-    grid-gap: 10px;
     padding: 10px;
 }
 
