@@ -8,7 +8,7 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    background: #eeeeee;
+    background: #d3d3d3;
 }
 
 h2 {
@@ -69,18 +69,18 @@ p {
     min-height: auto;
     text-align: left;
     float: left;
-    color: #eeeeee;
+    color: #d3d3d3;
 }
 
 .time_subtitle {
-    color: #eeeeee;
+    color: #d3d3d3;
     font-size: 14px;
     min-height: auto;
     float: right;
 }
 
 .card_subheader {
-    color: #eeeeee;
+    color: #d3d3d3;
     font-size: 18px;
     min-height: auto;
     text-align: left;
@@ -91,7 +91,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
-    color: #eeeeee;
+    color: #d3d3d3;
     background-color: #272727;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -100,7 +100,7 @@ p {
 }
 
 .icons {
-    color: #eeeeee;
+    color: #d3d3d3;
     min-width: 400px;
     max-width: 400px;
     justify-content: space-evenly;
@@ -148,15 +148,15 @@ p {
     width: 100%;
     line-height: 24px;
     text-align: center;
-    color: #eeeeee;
-    background-color: #002233;
+    color: #d3d3d3;
+    background-color: #013a63;
 }
 
 .contact_info {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
-    color: #eeeeee;
+    color: #d3d3d3;
     background-color: #272727;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -170,17 +170,17 @@ p {
     margin: 0px 0px 0px 0px;
     line-height: 24px;
     text-align: center;
-    color: #eeeeee;
+    color: #d3d3d3;
     background-color: #272727;
     min-width: 230px;
 }
 
 a:link {
-    color: #eeeeee;
+    color: #d3d3d3;
 }
 
 .challenge {
-    color: #eeeeee;
+    color: #d3d3d3;
     text-decoration: underline;
 }
 
@@ -215,13 +215,13 @@ a:link {
     align-self: center;
     text-align: center;
     justify-content: center;
-    color: #eeeeee;
-    background-color: #002233;
+    color: white;
+    background-color: #013a63;
 }
 
 .header {
     /*grid-area: header;*/
-    background-color: #002233;
+    background-color: #013a63;
 }
 
 .main_body {
@@ -259,7 +259,7 @@ a:link {
 
 td {
     text-align: center;
-    color: #eeeeee;
+    color: #d3d3d3;
 }
 
 @media (orientation: portrait) {
@@ -273,7 +273,7 @@ td {
         margin: 10px 10px 10px 10px;
     }
     .icons_centered {
-        background-color: #eeeeee;
+        background-color: #d3d3d3;
         justify-content: space-evenly;
         display: flex;
         margin-top: 5px;
