@@ -87,16 +87,20 @@ p {
 }
 
 .card,
-.profile {
+.profile,
+.error {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
     color: #d3d3d3;
     background-color: #272727;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 10px;
     display: block;
     text-align: justify;
+}
+
+.error {
+    margin-right: 10px;
 }
 
 .icons {
@@ -285,6 +289,7 @@ td {
     justify-content: space-evenly;
     display: flex;
     margin-top: 5px;
+    align-content: center;
 }
 
 @media (orientation: landscape) {
