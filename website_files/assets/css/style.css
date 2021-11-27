@@ -280,6 +280,13 @@ td {
     }
 }
 
+.icons_centered_always_show {
+    background-color: #d3d3d3;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 5px;
+}
+
 @media (orientation: landscape) {
     .icons_centered {
         display: none;
