@@ -11,9 +11,11 @@ body {
     background: #d3d3d3;
 }
 
-h2 {
+h1 {
     margin: 0px;
     padding: 0px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
 }
 
 p {
@@ -47,7 +49,7 @@ p {
 .fab.fa-linkedin,
 .fas.fa-file-pdf {
     font-size: 40px;
-    color: #e76f51;
+    color: #eb5e28;
     padding: 0px 20px 0px 20px;
 }
 
@@ -55,11 +57,11 @@ p {
 .fab.fa-github-square:hover,
 .fas.fa-rss-square:hover,
 .fas.fa-file-pdf:hover {
-    color: #e9c46a;
+    color: #00b4d8;
 }
 
 .stand_out_color_text {
-    color: #e9c46a;
+    color: #00b4d8;
     text-align: center;
     font-size: 24px;
 }
@@ -153,7 +155,7 @@ p {
     line-height: 24px;
     text-align: center;
     color: #d3d3d3;
-    background-color: #013a63;
+    background-color: #023E8A;
 }
 
 .contact_info {
@@ -220,12 +222,12 @@ a:link {
     text-align: center;
     justify-content: center;
     color: white;
-    background-color: #013a63;
+    background-color: #023E8A;
 }
 
 .header {
     /*grid-area: header;*/
-    background-color: #013a63;
+    background-color: #023E8A;
 }
 
 .main_body {
@@ -274,7 +276,7 @@ td {
     .row,
     .card {
         width: 90vw;
-        margin: 10px 10px 10px 10px;
+        margin: 0px 10px 10px 10px;
     }
     .icons_centered {
         background-color: #d3d3d3;
