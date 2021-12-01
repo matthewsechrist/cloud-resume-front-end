@@ -101,6 +101,10 @@ p {
     text-align: justify;
 }
 
+.profile {
+    margin: 0px 10px 10px 10px;
+}
+
 .error {
     margin-right: 10px;
 }
