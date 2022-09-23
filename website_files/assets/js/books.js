@@ -110,14 +110,15 @@ async function getMentionedAuthors(isbn) {
 }
 
 // Call the searchAuthor() function from the Enter key, also the "Click Me!" button
-var input = document.getElementById("search");
-input.addEventListener("keyup", function (event) {
+document.getElementById("search").addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
 
-    searchAuthor();
+    searchAuthor;
   }
 });
+
+document.getElementById("search_button").addEventListener("click", searchAuthor);
 
 // This function adds the authors to HTML in order of number of books associated by author in descending order,
 // mimicking a sort by relevancy
