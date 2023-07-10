@@ -23,23 +23,15 @@ async function searchAuthor() {
 
   // If a valid author is searched, display the first 10 books for the searched author
   if (searched_author) {
-    let nextread_authors = await fetch(
-      "https://nextreadapi.matthewsechrist.cloud/new_next_read",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          author: searched_author,
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
+    let books = await fetch(
+      'https://www.googleapis.com/books/v1/volumes?q=inauthor:${"' +
+        searched_author 
+        +'"}&maxResults=40'
     ).then((response) => response.json());
-    console.log(nextread_authors);
 
     // Only create the associated authors and current author HTML elements if the searched author is found
     // to be a valid author
-    if (nextread_authors.authors) {
+    if (books.totalItems > 0) {
       document
         .getElementById("current_author")
         .append(
@@ -49,9 +41,9 @@ async function searchAuthor() {
 
       // Each book result must have a 10 digit ISBN and a book description for NextRead to work correctly.
       // An array of ISBNs is sent for further processing to the getMentionedAuthors() function
-      for (var book in nextread_authors.items) {
-        if (nextread_authors.items[book].volumeInfo.industryIdentifiers) {
-          isbn = nextread_authors.items[book].volumeInfo.industryIdentifiers;
+      for (var book in books.items) {
+        if (books.items[book].volumeInfo.industryIdentifiers) {
+          isbn = books.items[book].volumeInfo.industryIdentifiers;
 
           for (
             var isbn_counter = 0;
@@ -60,14 +52,14 @@ async function searchAuthor() {
           ) {
             if (
               isbn[isbn_counter].type === "ISBN_10" &&
-              nextread_authors.items[book].volumeInfo.description
+              books.items[book].volumeInfo.description
             ) {
               isbns.push(isbn[isbn_counter].identifier);
 
               // Need to change from HTTP to HTTPS for the Google Books image link
               // if a valid thumbnail URL exists
-              if (nextread_authors.items[book].volumeInfo.imageLinks) {
-                var src = nextread_authors.items[
+              if (books.items[book].volumeInfo.imageLinks) {
+                var src = books.items[
                   book
                 ].volumeInfo.imageLinks.thumbnail.replace(
                   "http://",
