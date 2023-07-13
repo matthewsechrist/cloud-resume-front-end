@@ -1,5 +1,6 @@
 var authors = (isbns = flattened_authors = filtered_authors = []),
-  isbn = (searched_author = "");
+  isbn = (searched_author = ""),
+  newnew = [];
 
 const spinner = document.getElementById("spinner");
 
@@ -20,10 +21,12 @@ async function searchAuthor() {
   document
     .getElementById("mentioned_authors_header")
     .setAttribute("hidden", "");
+    spinner.setAttribute("hidden", "");
 
-  // If a valid author is searched, display the first 10 books for the searched author
   if (searched_author) {
-    let nextread_authors = await fetch(
+    spinner.removeAttribute("hidden");
+
+    let results = await fetch(
       "https://nextreadapi.matthewsechrist.cloud/new_next_read",
       {
         method: "POST",
@@ -35,11 +38,9 @@ async function searchAuthor() {
         },
       }
     ).then((response) => response.json());
-    console.log(nextread_authors);
 
-    // Only create the associated authors and current author HTML elements if the searched author is found
-    // to be a valid author
-    if (nextread_authors.authors) {
+    if (results.authors) {
+
       document
         .getElementById("current_author")
         .append(
@@ -49,63 +50,201 @@ async function searchAuthor() {
 
       // Each book result must have a 10 digit ISBN and a book description for NextRead to work correctly.
       // An array of ISBNs is sent for further processing to the getMentionedAuthors() function
-      for (var book in nextread_authors.items) {
-        if (nextread_authors.items[book].volumeInfo.industryIdentifiers) {
-          isbn = nextread_authors.items[book].volumeInfo.industryIdentifiers;
+      for (var name in results.authors) {
+        // Show a spinner while NextRead processing begins
+        console.log(results.authors)
 
-          for (
-            var isbn_counter = 0;
-            isbn_counter < isbn.length;
-            isbn_counter++
-          ) {
-            if (
-              isbn[isbn_counter].type === "ISBN_10" &&
-              nextread_authors.items[book].volumeInfo.description
-            ) {
-              isbns.push(isbn[isbn_counter].identifier);
+        document.getElementById("mentioned_authors").removeAttribute("hidden");
+        document
+          .getElementById("mentioned_authors_header")
+          .removeAttribute("hidden");
 
-              // Need to change from HTTP to HTTPS for the Google Books image link
-              // if a valid thumbnail URL exists
-              if (nextread_authors.items[book].volumeInfo.imageLinks) {
-                var src = nextread_authors.items[
-                  book
-                ].volumeInfo.imageLinks.thumbnail.replace(
-                  "http://",
-                  "https://"
-                );
-              }
+        mentioned_author_div = document.createElement("div");
+        mentioned_author_p = document.createElement("p");
+        mentioned_author_button = document.createElement("button");
 
-              // Below creates a centered div containing each book for the search author as an image
-              // that links to that book's WorldCat page
-              current_author_img = document.createElement("img");
-              current_author_a = document.createElement("a");
-              current_author_div = document.createElement("div");
+        // Create the accordion and panel HTML element for the mentioned author
+        mentioned_author_button.className = "accordion";
+        mentioned_author_div.className = "panel";
 
-              current_author_div.style.display = "inline-block";
-              current_author_img.id = isbn[isbn_counter].identifier;
-              current_author_img.src = src;
-              current_author_href =
-                "https://www.worldcat.org/isbn/" +
-                isbn[isbn_counter].identifier;
-              current_author_a.href = current_author_href;
-              current_author_a.target = "_blank";
+        // Set the button text to the mentioned author name
+        mentioned_author_button.textContent = results.authors[name].author;
 
-              current_author_a.appendChild(current_author_img);
-              current_author_div.setAttribute(
-                "id",
-                isbn[isbn_counter].identifier.toString()
-              );
+        // Set the id for each HTML element
+        mentioned_author_button.setAttribute(
+          "id",
+          results.authors[name].author + "_button"
+        );
+        mentioned_author_p.setAttribute(
+          "id",
+          results.authors[name].author + "_p"
+        );
+        mentioned_author_div.setAttribute("id", results.authors[name].author);
 
-              document
-                .getElementById("current_author_books")
-                .appendChild(current_author_div);
-              document
-                .getElementById(isbn[isbn_counter].identifier.toString())
-                .append(current_author_a);
-            }
+        // Adds the author HTML elements to the associate_authors div
+        document
+          .getElementById("mentioned_authors")
+          .appendChild(mentioned_author_button);
+        document
+          .getElementById("mentioned_authors")
+          .appendChild(mentioned_author_div);
+        document
+          .getElementById(results.authors[name].author)
+          .appendChild(mentioned_author_p);
+
+        // This code adds the accordion opening effect to each mentioned author button
+        mentioned_author_button.addEventListener("click", function () {
+          this.classList.toggle("active");
+
+          var panel = this.nextElementSibling;
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
           }
-        }
+        });
+
+        for (var book_result in results.authors[name].book_results)
+        {
+                  // This block of code creates an the image if the thumbnail for
+                  // each book of the mentioned author if it exists, otherwise show "No image found."
+                  // For each image, it adds a link the WorldCat page for its ISBN.
+                  img = document.createElement("img");
+                  a = document.createElement("a");
+                  img.id = results.authors[name].book_results[book_result].title;
+                  img.src = results.authors[name].book_results[book_result].thumbnail;
+                  href =
+                    "https://www.worldcat.org/isbn/" +
+                    results.authors[name].book_results[book_result].title;
+                  a.href = href;
+                  a.target = "_blank";
+
+                  a.appendChild(img);
+
+                  console.log(results.authors[name].book_results[book_result].thumbnail)
+                  console.log(results.authors[name].book_results[book_result].title)
+                  
+                  // Add each book's image and title in a p HTML element for in the HTML div
+                  // with the clas name of Panel
+                  document
+                    .getElementById(results.authors[name].author + "_p")
+                    .append(a);
+              }
+            
+
+        
+
+        // for (var book in mentioned_author_books.items) {
+        //   if (
+        //     mentioned_author_books.items[book].volumeInfo.industryIdentifiers
+        //   ) {
+        //     isbn =
+        //       mentioned_author_books.items[book].volumeInfo.industryIdentifiers;
+
+        //     for (isbn_index in isbn) {
+        //       if (isbn[isbn_index].type === "ISBN_10") {
+        //         if (mentioned_author_books.items[book].volumeInfo.imageLinks) {
+        //           var src = mentioned_author_books.items[
+        //             book
+        //           ].volumeInfo.imageLinks.thumbnail.replace(
+        //             "http://",
+        //             "https://"
+        //           );
+
+        //           // This block of code creates an the image if the thumbnail for
+        //           // each book of the mentioned author if it exists, otherwise show "No image found."
+        //           // For each image, it adds a link the WorldCat page for its ISBN.
+        //           img = document.createElement("img");
+        //           a = document.createElement("a");
+        //           img.id = isbn[isbn_index].identifier;
+        //           img.src = src;
+        //           href =
+        //             "https://www.worldcat.org/isbn/" +
+        //             isbn[isbn_index].identifier;
+        //           a.href = href;
+        //           a.target = "_blank";
+
+        //           a.appendChild(img);
+
+        //           // Add each book's image and title in a p HTML element for in the HTML div
+        //           // with the clas name of Panel
+        //           document
+        //             .getElementById(results.authors[name].author + "_p")
+        //             .append(a);
+        //         } else {
+        //           // If the book has a title but no image thumbnail, show the error
+        //           // "No image found"
+        //           if (mentioned_author_books.items[book].volumeInfo.title) {
+        //             document
+        //               .getElementById(mentioned_author_name + "_p")
+        //               .append(
+        //                 mentioned_author_books.items[book].volumeInfo.title +
+        //                   " - No image found  "
+        //               );
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+
+        //        if (results.authors.) {
+        //          isbn = results.items[book].volumeInfo.industryIdentifiers;
+
+        //         for (
+        //           var isbn_counter = 0;
+        //           isbn_counter < isbn.length;
+        //           isbn_counter++
+        //         ) {
+        //           if (
+        //             isbn[isbn_counter].type === "ISBN_10" &&
+        //             results.items[book].volumeInfo.description
+        //           ) {
+        //             isbns.push(isbn[isbn_counter].identifier);
+        //
+        //             // Need to change from HTTP to HTTPS for the Google Books image link
+        //             // if a valid thumbnail URL exists
+        //             if (results.items[book].volumeInfo.imageLinks) {
+        //               var src = results.items[
+        //                 book
+        //               ].volumeInfo.imageLinks.thumbnail.replace(
+        //                 "http://",
+        //                 "https://"
+        //               );
+        //             }
+
+        // Below creates a centered div containing each book for the search author as an image
+        // that links to that book's WorldCat page
+        //  current_author_img = document.createElement("img");
+        //  current_author_a = document.createElement("a");
+        //  current_author_div = document.createElement("div");
+
+        //  current_author_div.style.display = "inline-block";
+        //   current_author_img.id = "";
+        //   current_author_img.src = "";
+        //   current_author_href =
+        //     "https://www.worldcat.org/isbn/"
+        //  //   + isbn[isbn_counter].identifier;
+        //   current_author_a.href = current_author_href;
+        //   current_author_a.target = "_blank";
+
+        //   current_author_a.appendChild(current_author_img);
+        //  current_author_div.setAttribute(
+        //     "id",
+        //     results.authors[name].author
+        //   );
+
+        //   document
+        //     .getElementById("current_author_books")
+        //     .appendChild(current_author_div);
+        //   document
+        //     .getElementById(results.authors[name].author)
+        //     .append(current_author_a);
       }
+      // }
+      // }
+      //}
     } else {
       // If the searched author does not exist in Google Books, display an error
       current_author_div = document.createElement("div");
@@ -120,9 +259,8 @@ async function searchAuthor() {
       document.getElementById("current_author").setAttribute("hidden", "");
     }
   }
+  spinner.setAttribute("hidden", "");
 
-  // Show a spinner while NextRead processing begins
-  spinner.removeAttribute("hidden");
 
   // At this point, there is a valid list of ISBN(s), need to sanitize
   // the ISBNs array of any "falsy" ISBNs including: [], None, Null, and false
@@ -143,20 +281,19 @@ async function searchAuthor() {
   document
     .getElementById("mentioned_authors")
     .scrollIntoView({ behavior: "smooth", block: "center" });
-  spinner.setAttribute("hidden", "");
 }
 
 // This function passes in an ISBN, calls my API and returns all menionted authors which are
 // assigned to the authors array
-async function getMentionedAuthors(isbn) {
-  const response = await fetch("https://api.matthewsechrist.cloud/book", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: '{"book":"' + isbn + '"}',
-  }).then((response) => response.json());
+// async function getMentionedAuthors(isbn) {
+//   const response = await fetch("https://api.matthewsechrist.cloud/book", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: '{"book":"' + isbn + '"}',
+//   }).then((response) => response.json());
 
-  authors.push(response);
-}
+//   authors.push(response);
+//}
 
 // Call the searchAuthor() function from the Enter key, also the search button
 var input = document.getElementById("search");
@@ -175,7 +312,7 @@ clicked.addEventListener("click", searchAuthor);
 function addAuthors() {
   var flattened_authors = [],
     filtered_authors = [];
-  console.log(authors);
+  //console.log(authors);
   // Flatten multiple author array results into one flat authors array
   flattened_authors = authors.flat();
 
@@ -213,41 +350,37 @@ function addAuthors() {
   // This codes makes visible the mentioned authors divs, current author divs,
   // and makes the call to the getFirst10Books() to add the images for books
   // for each mentioned author
-  if (searched_author && ordered_authors.length > 0) {
-    document.getElementById("mentioned_authors").removeAttribute("hidden");
-    document
-      .getElementById("mentioned_authors_header")
-      .removeAttribute("hidden");
+  //if (searched_author) {
 
-    document.getElementById("current_author").removeAttribute("hidden");
-    document.getElementById("current_author_books").removeAttribute("hidden");
+  document.getElementById("current_author").removeAttribute("hidden");
+  document.getElementById("current_author_books").removeAttribute("hidden");
 
-    document
-      .getElementById("mentioned_authors_header")
-      .append("Click each mentioned author below to see a few of their books.");
+  document
+    .getElementById("mentioned_authors_header")
+    .append("Click each mentioned author below to see a few of their books.");
 
-    linebreak = document.createElement("br");
-    document.getElementById("mentioned_authors_header").appendChild(linebreak);
+  linebreak = document.createElement("br");
+  document.getElementById("mentioned_authors_header").appendChild(linebreak);
 
-    document
-      .getElementById("mentioned_authors_header")
-      .append("Then click a book to see which local library owns it!");
+  document
+    .getElementById("mentioned_authors_header")
+    .append("Then click a book to see which local library owns it!");
 
-    // Iterate over each mentioned, remove the item if the name is the same as
-    // the current author, or call getFirst10Books() passing in the
-    // the author from the authors array
-    for (author_index in ordered_authors) {
-      //Remove the currently searched author
-      if (
-        ordered_authors[author_index][0].toLowerCase() ==
-        searched_author.toLowerCase()
-      ) {
-        ordered_authors.splice(author_index, 1);
-      } else {
-        getFirst10Books(ordered_authors[author_index][0]);
-      }
+  // Iterate over each mentioned, remove the item if the name is the same as
+  // the current author, or call getFirst10Books() passing in the
+  // the author from the authors array
+  for (author_index in ordered_authors) {
+    //Remove the currently searched author
+    if (
+      ordered_authors[author_index][0].toLowerCase() ==
+      searched_author.toLowerCase()
+    ) {
+      ordered_authors.splice(author_index, 1);
+    } else {
+      getFirst10Books(ordered_authors[author_index][0]);
     }
   }
+  //}
 }
 
 // This functions adds HTML elements for the first 10 books return for each mentioned author
@@ -264,45 +397,6 @@ async function getFirst10Books(mentioned_author) {
   var mentioned_author_name = mentioned_author.replace(/\s+/g, "");
 
   // Create mentioned author HTML elements
-  mentioned_author_div = document.createElement("div");
-  mentioned_author_p = document.createElement("p");
-  mentioned_author_button = document.createElement("button");
-
-  // Create the accordion and panel HTML element for the mentioned author
-  mentioned_author_button.className = "accordion";
-  mentioned_author_div.className = "panel";
-
-  // Set the button text to the mentioned author name
-  mentioned_author_button.textContent = mentioned_author;
-
-  // Set the id for each HTML element
-  mentioned_author_button.setAttribute("id", mentioned_author_name + "_button");
-  mentioned_author_p.setAttribute("id", mentioned_author_name + "_p");
-  mentioned_author_div.setAttribute("id", mentioned_author_name);
-
-  // Adds the author HTML elements to the associate_authors div
-  document
-    .getElementById("mentioned_authors")
-    .appendChild(mentioned_author_button);
-  document
-    .getElementById("mentioned_authors")
-    .appendChild(mentioned_author_div);
-  document
-    .getElementById(mentioned_author_name)
-    .appendChild(mentioned_author_p);
-
-  // This code adds the accordion opening effect to each mentioned author button
-  mentioned_author_button.addEventListener("click", function () {
-    this.classList.toggle("active");
-
-    var panel = this.nextElementSibling;
-
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
 
   // Adds the mentioned author's books to the current_author div that have
   // an associated ISBN_10 value.
@@ -333,7 +427,9 @@ async function getFirst10Books(mentioned_author) {
 
             // Add each book's image and title in a p HTML element for in the HTML div
             // with the clas name of Panel
-            document.getElementById(mentioned_author_name + "_p").append(a);
+            document
+              .getElementById(results.authors[name].author + "_p")
+              .append(a);
           } else {
             // If the book has a title but no image thumbnail, show the error
             // "No image found"
