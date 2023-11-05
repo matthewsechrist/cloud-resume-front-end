@@ -18,7 +18,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./website_files/ s3://matthewsechrist.cloud
+      run: aws s3 sync ./assets/ s3://matthewsechrist.cloud/assets/
 
     - name: Setup npm package
       run: npm init -y && npm install
