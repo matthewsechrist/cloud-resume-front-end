@@ -17,5 +17,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Deploy static site to S3 bucket
-      run: aws s3 sync --size-only ./ s3://matthewsechrist.cloud/
+    - name: Deploy static site assets to S3 bucket
+      run: aws s3 sync --size-only ./assets s3://matthewsechrist.cloud/assets/
+
+    - name: Deploy nextread.html to S3 bucket   
+      run: aws s3 sync --size-only ./nextread.html s3://matthewsechrist.cloud/nextread.html
+
+    - name: Deploy index.html to S3 bucket   
+      run: aws s3 sync --size-only ./index.html s3://matthewsechrist.cloud/index.html
