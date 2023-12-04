@@ -21,4 +21,4 @@ jobs:
       run: aws s3 sync --size-only ./assets s3://matthewsechrist.cloud/assets/
 
     - name: Deploy index.html to S3 bucket   
-      run: aws s3 sync --size-only ./index.html s3://matthewsechrist.cloud/index.html
+      run: aws s3 sync --size-only index.html s3://matthewsechrist.cloud/index.html
