@@ -19,5 +19,5 @@ jobs:
 
     - name: Deploy static site assets to S3 bucket
       run:
-             aws s3 sync --size-only . s3://${{ secrets.AWS_S3_FRONT_END_BUCKET_NAME }} --exclude ".git/*"
-          
+             aws s3 sync --size-only . s3://matthewsechrist.cloud --exclude ".git/*"
+
