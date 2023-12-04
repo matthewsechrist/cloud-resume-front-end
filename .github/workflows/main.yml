@@ -20,8 +20,5 @@ jobs:
     - name: Deploy static site assets to S3 bucket
       run: aws s3 sync --size-only ./assets s3://matthewsechrist.cloud/assets/
 
-    - name: Deploy nextread.html to S3 bucket   
-      run: aws s3 sync --size-only ./nextread.html s3://matthewsechrist.cloud/nextread.html
-
     - name: Deploy index.html to S3 bucket   
       run: aws s3 sync --size-only ./index.html s3://matthewsechrist.cloud/index.html
