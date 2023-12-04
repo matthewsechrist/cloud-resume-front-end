@@ -18,7 +18,5 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site assets to S3 bucket
-      run: aws s3 sync --size-only ./assets s3://matthewsechrist.cloud/assets/
+      run: aws s3 sync --size-only . s3://matthewsechrist.cloud --delete
 
-    - name: Deploy index.html to S3 bucket   
-      run: aws s3 sync --size-only index.html s3://matthewsechrist.cloud/index.html
