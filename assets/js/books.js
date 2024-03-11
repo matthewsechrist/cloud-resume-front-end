@@ -7,7 +7,7 @@ async function searchAuthor() {
 
   document.getElementById("mentioned_authors").innerHTML =
     document.getElementById("mentioned_authors_header").innerHTML =
-    document.getElementById("current_author").innerHTML =
+    document.getElementById("error_message").innerHTML =
       "";
   document.getElementById("mentioned_authors").setAttribute("hidden", "");
   document
@@ -16,7 +16,7 @@ async function searchAuthor() {
   spinner.setAttribute("hidden", "");
 
   if (searched_author) {
-    spinner.removeAttribute("hidden");
+    spinner.removeAttribute("hidden");  
 
     let results = await fetch(
       "https://nextreadapi.matthewsechrist.cloud/new_next_read",
@@ -32,12 +32,6 @@ async function searchAuthor() {
     ).then((response) => response.json());
 
     if (results.authors) {
-      document
-        .getElementById("current_author")
-        .append(
-          "Books by " + searched_author + " used for NextRead Processing"
-        );
-      document.createElement("mentioned_authors");
 
       for (var name in results.authors) {
         document.getElementById("mentioned_authors").removeAttribute("hidden");
@@ -90,7 +84,7 @@ async function searchAuthor() {
           img = document.createElement("img");
           a = document.createElement("a");
           img.id = results.authors[name].book_results[book_result].title;
-          img.src = results.authors[name].book_results[book_result].thumbnail;
+          img.src = results.authors[name].book_results[book_result].thumbnail.replace('http://','https://');;
           href =
             "https://www.worldcat.org/isbn/" +
             results.authors[name].book_results[book_result].isbn;
@@ -105,13 +99,13 @@ async function searchAuthor() {
         }
       }
     } else {
-      current_author_div = document.createElement("div");
-      current_author_div.append(results.error + " for " + searched_author);
+      error_div = document.createElement("div");
+      error_div.append(results.error + " for " + searched_author);
       document
         .getElementById("mentioned_authors")
-        .appendChild(current_author_div);
+        .appendChild(error_div);
       document.getElementById("mentioned_authors").removeAttribute("hidden");
-      document.getElementById("current_author").setAttribute("hidden", "");
+      document.getElementById("error_message").removeAttribute("hidden");
     }
   }
   spinner.setAttribute("hidden", "");
